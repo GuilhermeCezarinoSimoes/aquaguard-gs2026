@@ -71,6 +71,13 @@ reconexão Wi-Fi automática, contador de falhas de envio sem perder o alerta lo
 | 8 | `API_URL` válido | Serial mostra `[api] 201 risco_api=...` |
 
 ## Status de validação
-- Firmware e diagrama escritos; regras validadas indiretamente pelos testes do backend (mesma lógica).
-- **Pendente (equipe):** executar no Wokwi, salvar o projeto, gravar o vídeo (roteiro em `../docs/roteiros/roteiro_video_iot.md`).
-  A compilação local do firmware não foi executada neste ambiente.
+- ✅ Em 17/11/2026 o `diagram.json` e o `sketch.ino` foram carregados num projeto novo do Wokwi (sem login): o diagrama
+  renderizou com todas as ligações, o firmware **compilou** com a biblioteca LiquidCrystal I2C e a simulação **iniciou**
+  (LCD exibiu "AquaGuard"; Serial: `[wifi] conectando..... ok 10.10.0.2` e
+  `[leitura] {"codigoSensor":"AQG-001","nivelAguaCm":48.7,"chuvaMmH":0.0} risco_local=Atencao` — com o sensor a 150 cm,
+  48,7 cm de água ≥ 60 % do nível de alerta = Atenção, exatamente como a API calcula).
+  Print: `../evidencias/iot/01_wokwi_compilado_executando.jpg`.
+- ✅ Regras de risco idênticas às do backend (cobertas pelos testes `CalculadoraRiscoTests`).
+- ⏳ **Equipe:** entrar na conta Wokwi, recriar o projeto com estes arquivos, **salvar** (gera o link), executar o roteiro de
+  testes acima e gravar o vídeo (`../docs/roteiros/roteiro_video_iot.md`). O projeto de validação não foi salvo porque
+  exige login na conta de vocês.

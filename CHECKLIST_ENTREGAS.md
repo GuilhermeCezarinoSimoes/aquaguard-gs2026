@@ -62,10 +62,10 @@ POO, Web API, EF Core + LINQ, Async/Await, qualidade — mapa em `backend/README
 | Dashboard Risco Cidadão | 2,0 | Evidenciada | `03_print_dashboard_risco_cidadao.jpg` |
 | ZIP + vídeo | — | **Bloqueada (gravação/envio)** | comando do ZIP no README |
 
-## Physical Computing — Implementada (não simulada aqui)
+## Physical Computing — Implementada · Testada no Wokwi
 | Requisito | Status |
 |---|---|
-| Circuito ESP32 (`diagram.json`, `sketch.ino`) | Implementada; **compilação/simulação pendente no Wokwi** |
+| Circuito ESP32 (`diagram.json`, `sketch.ino`) | Compilou e executou no Wokwi (evidência `evidencias/iot/01_wokwi_compilado_executando.jpg`); falta salvar na conta da equipe |
 | Integração com a solução | Mesmas regras e mesmo payload da API (comprovado com simulador de payload) |
 | `integrantes.txt` | OK (preencher links) |
 | Link Wokwi + vídeo ≤ 4 min | **Bloqueada (conta Wokwi/gravação)** |

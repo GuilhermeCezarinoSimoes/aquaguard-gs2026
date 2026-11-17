@@ -52,7 +52,7 @@ Detalhes e o que está integrado × demonstrado separadamente: [ARQUITETURA.md](
 | Mobile Development & IoT | [`mobile/`](mobile/README.md) | `npx expo start` | Implementada e testada (web); falta vídeo |
 | IA & Machine Learning | [`ml/`](ml/README.md) | notebook executado | Implementada e testada; falta vídeo |
 | Cybersecurity | [`cybersecurity/`](cybersecurity/README.md) | `python -m aquaguard_sec` | Implementada e testada; falta vídeo/ZIP |
-| Physical Computing | [`iot/`](iot/README.md) | Wokwi | Implementada; falta simular no Wokwi, link e vídeo |
+| Physical Computing | [`iot/`](iot/README.md) | Wokwi | Compilada e simulada no Wokwi; falta salvar na conta (link) e vídeo |
 | Operating Systems | [`operating-systems/`](operating-systems/README.md) | `00_provisionar_tudo.sh` na VM | Implementada; falta executar na VM e vídeo |
 | Testing & QA | [`testing/`](testing/README.md) | importar CSVs no Azure | Documentada; falta cadastrar no Azure, PDF e pitch |
 
