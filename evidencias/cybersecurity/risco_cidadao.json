@@ -1,0 +1,704 @@
+{
+  "antes": {
+    "valor": 92.4,
+    "faixa": "Crítico",
+    "soma": 309.5,
+    "componentes": [
+      {
+        "tipo": "dado_em_repouso",
+        "item": "SAUDE_CONTEXTO",
+        "peso": 9,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 6.75
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "CPF",
+        "peso": 7,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 5.25
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "TELEFONE",
+        "peso": 4,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "ENDERECO_RESIDENCIAL",
+        "peso": 4,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "TELEFONE",
+        "peso": 4,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "EMAIL",
+        "peso": 4,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "SAUDE_CONTEXTO",
+        "peso": 9,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 6.75
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "SENHA",
+        "peso": 10,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 7.5
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "CID10",
+        "peso": 9,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 6.75
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "CARTAO_CREDITO",
+        "peso": 8,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 6.0
+      },
+      {
+        "tipo": "dado_em_repouso",
+        "item": "TOKEN_API",
+        "peso": 10,
+        "fator": 0.5,
+        "alcance": 1.5,
+        "pontos": 7.5
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 9,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "log_aplicacao",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "feed_publico_app",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "prompt_llm_terceiro",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "analytics_externo",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 4,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "log_aplicacao",
+        "peso": 4,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 4.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "feed_publico_app",
+        "peso": 4,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 4.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "prompt_llm_terceiro",
+        "peso": 4,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 4.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "analytics_externo",
+        "peso": 4,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 4.0
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 9,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "log_aplicacao",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "feed_publico_app",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "prompt_llm_terceiro",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "analytics_externo",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 10,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "log_aplicacao",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "feed_publico_app",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "prompt_llm_terceiro",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "analytics_externo",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 9,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "log_aplicacao",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "feed_publico_app",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "prompt_llm_terceiro",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "analytics_externo",
+        "peso": 9,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 9.0
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 8,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "log_aplicacao",
+        "peso": 8,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 8.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "feed_publico_app",
+        "peso": 8,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 8.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "prompt_llm_terceiro",
+        "peso": 8,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 8.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "analytics_externo",
+        "peso": 8,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 8.0
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 10,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "log_aplicacao",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "feed_publico_app",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "prompt_llm_terceiro",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "fluxo_vazou",
+        "item": "analytics_externo",
+        "peso": 10,
+        "fator": 1.0,
+        "alcance": 1.0,
+        "pontos": 10.0
+      },
+      {
+        "tipo": "codigo_vulneravel",
+        "item": "prototipo/pipeline_vulneravel.py:23",
+        "peso": 6,
+        "fator": 0.5,
+        "alcance": 1.0,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "codigo_vulneravel",
+        "item": "prototipo/pipeline_vulneravel.py:24",
+        "peso": 6,
+        "fator": 0.5,
+        "alcance": 1.0,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "codigo_vulneravel",
+        "item": "prototipo/pipeline_vulneravel.py:27",
+        "peso": 6,
+        "fator": 0.5,
+        "alcance": 1.0,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "codigo_vulneravel",
+        "item": "prototipo/pipeline_vulneravel.py:30",
+        "peso": 6,
+        "fator": 0.5,
+        "alcance": 1.0,
+        "pontos": 3.0
+      },
+      {
+        "tipo": "codigo_vulneravel",
+        "item": "prototipo/pipeline_vulneravel.py:31",
+        "peso": 6,
+        "fator": 0.5,
+        "alcance": 1.0,
+        "pontos": 3.0
+      }
+    ]
+  },
+  "depois": {
+    "valor": 17.9,
+    "faixa": "Baixo",
+    "soma": 23.6,
+    "componentes": [
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 9,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "log_aplicacao",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "feed_publico_app",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "prompt_llm_terceiro",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "analytics_externo",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 4,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "log_aplicacao",
+        "peso": 4,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.4
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "feed_publico_app",
+        "peso": 4,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.4
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "prompt_llm_terceiro",
+        "peso": 4,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.4
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "analytics_externo",
+        "peso": 4,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.4
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 9,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "log_aplicacao",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "feed_publico_app",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "prompt_llm_terceiro",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "analytics_externo",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 10,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "log_aplicacao",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "feed_publico_app",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "prompt_llm_terceiro",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "analytics_externo",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 9,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "log_aplicacao",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "feed_publico_app",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "prompt_llm_terceiro",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "analytics_externo",
+        "peso": 9,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.9
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 8,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "log_aplicacao",
+        "peso": 8,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.8
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "feed_publico_app",
+        "peso": 8,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.8
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "prompt_llm_terceiro",
+        "peso": 8,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.8
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "analytics_externo",
+        "peso": 8,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 0.8
+      },
+      {
+        "tipo": "fluxo_permitido",
+        "item": "banco_cifrado",
+        "peso": 10,
+        "fator": 0.0,
+        "alcance": 1.0,
+        "pontos": 0.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "log_aplicacao",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "feed_publico_app",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "prompt_llm_terceiro",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      },
+      {
+        "tipo": "fluxo_bloqueado",
+        "item": "analytics_externo",
+        "peso": 10,
+        "fator": 0.1,
+        "alcance": 1.0,
+        "pontos": 1.0
+      }
+    ]
+  }
+}

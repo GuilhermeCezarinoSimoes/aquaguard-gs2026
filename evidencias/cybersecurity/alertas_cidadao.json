@@ -1,0 +1,54 @@
+{
+  "motor": "offline (sem credencial de LLM)",
+  "alertas": [
+    {
+      "id": "F1",
+      "titulo": "Telefone ou e-mail exposto",
+      "risco_para_voce": "Seu contato público pode receber golpes de falso resgate durante enchentes.",
+      "o_que_fizemos": "Ocultamos o contato no relato público.",
+      "o_que_voce_pode_fazer": "Não divulgue seu telefone; a Defesa Civil oficial liga do 199."
+    },
+    {
+      "id": "F2",
+      "titulo": "Senha ou chave exposta",
+      "risco_para_voce": "Alguém poderia entrar em uma conta ou enviar dados falsos se passando por um sensor.",
+      "o_que_fizemos": "Bloqueamos a gravação e a credencial deve ser trocada imediatamente.",
+      "o_que_voce_pode_fazer": "Nunca escreva senhas em relatos ou mensagens. Se escreveu, troque a senha."
+    },
+    {
+      "id": "F3",
+      "titulo": "Dados de cartão expostos",
+      "risco_para_voce": "O número do cartão pode ser usado em compras fraudulentas.",
+      "o_que_fizemos": "Bloqueamos e apagamos o dado.",
+      "o_que_voce_pode_fazer": "Avise seu banco e peça um novo cartão."
+    },
+    {
+      "id": "F4",
+      "titulo": "Documento pessoal (CPF/RG) no relato",
+      "risco_para_voce": "Com seu CPF, golpistas podem tentar abrir contas ou fazer compras em seu nome.",
+      "o_que_fizemos": "Mascaramos o número; ele não aparece para outros moradores.",
+      "o_que_voce_pode_fazer": "O AquaGuard nunca pede CPF. Desconfie de quem pedir em nome do app."
+    },
+    {
+      "id": "F5",
+      "titulo": "Endereço exato da sua casa",
+      "risco_para_voce": "Com a casa vazia durante a enchente, o endereço exposto facilita furtos.",
+      "o_que_fizemos": "Publicamos só o bairro, nunca o número da casa.",
+      "o_que_voce_pode_fazer": "Informe apenas a rua ou um ponto de referência."
+    },
+    {
+      "id": "F6",
+      "titulo": "Informação de saúde no relato",
+      "risco_para_voce": "Dados de saúde são sensíveis: expostos, podem gerar discriminação ou golpes.",
+      "o_que_fizemos": "Removemos a informação antes de publicar o relato e de gravar logs.",
+      "o_que_voce_pode_fazer": "Para pedir ajuda prioritária (ex.: pessoa acamada), ligue 199 (Defesa Civil)."
+    },
+    {
+      "id": "F7",
+      "titulo": "Dado pessoal indo para um lugar inseguro",
+      "risco_para_voce": "Uma parte do sistema tentou enviar seus dados para um log ou serviço externo.",
+      "o_que_fizemos": "O AquaGuard bloqueou o envio automaticamente antes que vazasse.",
+      "o_que_voce_pode_fazer": "Nada a fazer: a proteção funcionou. A equipe corrigirá o código."
+    }
+  ]
+}

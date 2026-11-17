@@ -1,0 +1,1088 @@
+{
+  "v1_sem_protecao": [
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO",
+        "TELEFONE"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO",
+        "TELEFONE"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T02"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO",
+        "TELEFONE"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "EMAIL",
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "EMAIL",
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T03"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "EMAIL",
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T04"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T05"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T06"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T08"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T10"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "vazou",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    }
+  ],
+  "v2_protegido": [
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO",
+        "TELEFONE"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO",
+        "TELEFONE"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T02"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "CPF",
+        "SAUDE_CONTEXTO",
+        "TELEFONE"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T02.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "EMAIL",
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "EMAIL",
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T03"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "EMAIL",
+        "ENDERECO_RESIDENCIAL",
+        "TELEFONE"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T03.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T04"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "SAUDE_CONTEXTO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T04.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T05"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "SENHA"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T05.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T06"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "CID10"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T06.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T08"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "CARTAO_CREDITO"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T08.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "permitido",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T10"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [
+        "TOKEN_API"
+      ],
+      "decisao": "bloqueado",
+      "origem": "relato:T10.descricao"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "banco_cifrado",
+      "seguro": true,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "log_aplicacao",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "feed_publico_app",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "prompt_llm_terceiro",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    },
+    {
+      "sink": "analytics_externo",
+      "seguro": false,
+      "rotulos": [],
+      "decisao": "permitido",
+      "origem": "?"
+    }
+  ]
+}

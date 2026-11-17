@@ -1,0 +1,46 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\guilh\GS\cybersecurity\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\guilh\GS\cybersecurity
+plugins: anyio-4.16.0
+collecting ... collected 37 items
+
+tests/test_seguranca.py::test_cpf_varios_formatos_inclusive_ofuscado[529.982.247-25] PASSED [  2%]
+tests/test_seguranca.py::test_cpf_varios_formatos_inclusive_ofuscado[52998224725] PASSED [  5%]
+tests/test_seguranca.py::test_cpf_varios_formatos_inclusive_ofuscado[5 2 9 . 9 8 2 . 2 4 7 - 2 5] PASSED [  8%]
+tests/test_seguranca.py::test_cpf_varios_formatos_inclusive_ofuscado[cpf 529-982-247/25] PASSED [ 10%]
+tests/test_seguranca.py::test_validadores_matematicos PASSED             [ 13%]
+tests/test_seguranca.py::test_regras_detectam[me liga (11) 98765-4321-TELEFONE] PASSED [ 16%]
+tests/test_seguranca.py::test_regras_detectam[+55 11 912345678-TELEFONE] PASSED [ 18%]
+tests/test_seguranca.py::test_regras_detectam[contato: joao.silva@example.com-EMAIL] PASSED [ 21%]
+tests/test_seguranca.py::test_regras_detectam[minha senha: Enchente@2026-SENHA] PASSED [ 24%]
+tests/test_seguranca.py::test_regras_detectam[token sk-test_AbCdEfGhIjKlMnOpQrSt-TOKEN_API] PASSED [ 27%]
+tests/test_seguranca.py::test_regras_detectam[CID J45.0-CID10] PASSED    [ 29%]
+tests/test_seguranca.py::test_regras_detectam[RG 12.345.678-9-RG] PASSED [ 32%]
+tests/test_seguranca.py::test_regras_detectam[CEP 08061-000-CEP] PASSED  [ 35%]
+tests/test_seguranca.py::test_regras_detectam[cart\xe3o 4111 1111 1111 1111-CARTAO_CREDITO] PASSED [ 37%]
+tests/test_seguranca.py::test_regras_detectam[moro na Rua das Flores, 123-ENDERECO_RESIDENCIAL] PASSED [ 40%]
+tests/test_seguranca.py::test_regras_detectam[Minha m\xe3e \xe9 cadeirante-SAUDE_CONTEXTO] PASSED [ 43%]
+tests/test_seguranca.py::test_regras_detectam[tenho asma-SAUDE_CONTEXTO] PASSED [ 45%]
+tests/test_seguranca.py::test_regras_detectam[CNPJ 11.222.333/0001-81-CNPJ] PASSED [ 48%]
+tests/test_seguranca.py::test_sem_falso_positivo[Rua alagada na altura do joelho] PASSED [ 51%]
+tests/test_seguranca.py::test_sem_falso_positivo[protocolo 123.456.789-00] PASSED [ 54%]
+tests/test_seguranca.py::test_sem_falso_positivo[Sensor AQG-004 mediu 95 cm \xe0s 18:30] PASSED [ 56%]
+tests/test_seguranca.py::test_sem_falso_positivo[A asma \xe9 comum no inverno] PASSED [ 59%]
+tests/test_seguranca.py::test_sem_falso_positivo[N\xedvel 1234 5678 do c\xf3rrego] PASSED [ 62%]
+tests/test_seguranca.py::test_sem_falso_positivo[Ligue 199 para a Defesa Civil] PASSED [ 64%]
+tests/test_seguranca.py::test_cpf_nao_vira_telefone_duplicado PASSED     [ 67%]
+tests/test_seguranca.py::test_json_aninhado_e_campo_sensivel PASSED      [ 70%]
+tests/test_seguranca.py::test_mascaramento_nunca_expoe_valor PASSED      [ 72%]
+tests/test_seguranca.py::test_achado_nao_guarda_valor_bruto PASSED       [ 75%]
+tests/test_seguranca.py::test_propagacao_de_taint PASSED                 [ 78%]
+tests/test_seguranca.py::test_texto_limpo_nao_e_contaminado PASSED       [ 81%]
+tests/test_seguranca.py::test_sink_inseguro_bloqueia_e_seguro_permite PASSED [ 83%]
+tests/test_seguranca.py::test_modo_sanitizar_entrega_dado_mascarado PASSED [ 86%]
+tests/test_seguranca.py::test_estatico_encontra_vulnerabilidades_e_aprova_versao_segura PASSED [ 89%]
+tests/test_seguranca.py::test_estatico_reatribuicao_limpa_taint PASSED   [ 91%]
+tests/test_seguranca.py::test_auditoria_detecta_adulteracao PASSED       [ 94%]
+tests/test_seguranca.py::test_irc_cai_quando_fluxos_sao_bloqueados PASSED [ 97%]
+tests/test_seguranca.py::test_llm_offline_nao_recebe_nem_devolve_pii PASSED [100%]
+
+============================= 37 passed in 0.08s ==============================

@@ -1,0 +1,9 @@
+﻿nivel= 20.0cm chuva= 5.0mm/h -> risco=Normal   alerta_bairro=-
+nivel= 35.0cm chuva=12.0mm/h -> risco=Atencao  alerta_bairro=Critico
+nivel= 55.0cm chuva=22.0mm/h -> risco=Atencao  alerta_bairro=Critico
+nivel= 75.0cm chuva=30.0mm/h -> risco=Critico  alerta_bairro=Critico
+nivel= 95.0cm chuva=38.0mm/h -> risco=Critico  alerta_bairro=Critico
+nivel=125.0cm chuva=55.0mm/h -> risco=Critico  alerta_bairro=Critico
+nivel=110.0cm chuva=20.0mm/h -> risco=Critico  alerta_bairro=Critico
+nivel= 70.0cm chuva= 5.0mm/h -> risco=Alerta   alerta_bairro=Critico
+nivel= 40.0cm chuva= 0.0mm/h -> risco=Normal   alerta_bairro=-

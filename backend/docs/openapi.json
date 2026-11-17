@@ -1,0 +1,1211 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "AquaGuard API",
+    "description": "CitizenTech de prevenção de alagamentos: sensores IoT (ESP32), leituras, alertas por bairro e ocorrências relatadas pelos cidadãos. FIAP Global Solution 2026.2.",
+    "contact": {
+      "name": "Guilherme Cezarino Simoes e Fabrini Soares"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/alertas": {
+      "get": {
+        "tags": [
+          "Alertas"
+        ],
+        "summary": "Lista alertas (por padrão, só os ativos).",
+        "parameters": [
+          {
+            "name": "bairro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "somenteAtivos",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AlertaResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/alertas/{id}/encerrar": {
+      "post": {
+        "tags": [
+          "Alertas"
+        ],
+        "summary": "Encerra um alerta (situação normalizada).",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AlertaResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/leituras": {
+      "post": {
+        "tags": [
+          "Leituras"
+        ],
+        "summary": "Registra uma leitura, calcula o risco e, se necessário, emite/escala o alerta do bairro.",
+        "description": "Exemplo de payload do ESP32:\r\n            \r\n    { \"codigoSensor\": \"AQG-001\", \"nivelAguaCm\": 95.5, \"chuvaMmH\": 32 }",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarLeituraRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarLeituraRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrarLeituraRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistrarLeituraResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "DeviceKey": [ ]
+          }
+        ]
+      }
+    },
+    "/api/ocorrencias": {
+      "get": {
+        "tags": [
+          "Ocorrencias"
+        ],
+        "summary": "Lista ocorrências (paginado, mais graves primeiro).",
+        "parameters": [
+          {
+            "name": "bairro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/StatusOcorrencia"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "tamanho",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcorrenciaResponsePaginaResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Ocorrencias"
+        ],
+        "summary": "Registra uma nova ocorrência (sem dados pessoais).",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarOcorrenciaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarOcorrenciaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarOcorrenciaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcorrenciaResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocorrencias/{id}": {
+      "get": {
+        "tags": [
+          "Ocorrencias"
+        ],
+        "summary": "Obtém uma ocorrência.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcorrenciaResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ocorrencias/{id}/status": {
+      "patch": {
+        "tags": [
+          "Ocorrencias"
+        ],
+        "summary": "Avança o status: IniciarAnalise, Resolver ou Descartar.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarStatusOcorrenciaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarStatusOcorrenciaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlterarStatusOcorrenciaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OcorrenciaResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/painel": {
+      "get": {
+        "tags": [
+          "Painel"
+        ],
+        "summary": "Resumo de risco, alertas e ocorrências por bairro.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PainelResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sensores": {
+      "get": {
+        "tags": [
+          "Sensores"
+        ],
+        "summary": "Lista sensores com a última leitura e o risco atual.",
+        "parameters": [
+          {
+            "name": "bairro",
+            "in": "query",
+            "description": "Filtra por bairro (opcional).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ativo",
+            "in": "query",
+            "description": "Filtra por situação (opcional).",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SensorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Sensores"
+        ],
+        "summary": "Cadastra um novo sensor.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarSensorRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarSensorRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarSensorRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SensorResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sensores/{id}": {
+      "get": {
+        "tags": [
+          "Sensores"
+        ],
+        "summary": "Obtém um sensor pelo id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SensorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sensores"
+        ],
+        "summary": "Desativa um sensor (manutenção). Não apaga o histórico.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sensores/{id}/limites": {
+      "put": {
+        "tags": [
+          "Sensores"
+        ],
+        "summary": "Recalibra os limites de alerta/crítico do ponto.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarLimitesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarLimitesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AtualizarLimitesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SensorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/sensores/{id}/leituras": {
+      "get": {
+        "tags": [
+          "Sensores"
+        ],
+        "summary": "Histórico de leituras de um sensor.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do sensor.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "horas",
+            "in": "query",
+            "description": "Janela em horas (1–720). Padrão 24.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 24
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "description": "Máximo de registros (1–1000). Padrão 200.",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 200
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LeituraResponse"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AcaoOcorrencia": {
+        "enum": [
+          "IniciarAnalise",
+          "Resolver",
+          "Descartar"
+        ],
+        "type": "string"
+      },
+      "AlertaResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivel": {
+            "$ref": "#/components/schemas/NivelRisco"
+          },
+          "nivelDescricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "mensagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "ativo": {
+            "type": "boolean"
+          },
+          "sensorId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "criadoEmUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "encerradoEmUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AlterarStatusOcorrenciaRequest": {
+        "type": "object",
+        "properties": {
+          "acao": {
+            "$ref": "#/components/schemas/AcaoOcorrencia"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AtualizarLimitesRequest": {
+        "type": "object",
+        "properties": {
+          "nivelAlertaCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "nivelCriticoCm": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CriarOcorrenciaRequest": {
+        "type": "object",
+        "properties": {
+          "tipo": {
+            "$ref": "#/components/schemas/TipoOcorrencia"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "severidade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apelido": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CriarSensorRequest": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "nivelAlertaCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "nivelCriticoCm": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LeituraResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sensorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nivelAguaCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "chuvaMmH": {
+            "type": "number",
+            "format": "double"
+          },
+          "dataHoraUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "risco": {
+            "$ref": "#/components/schemas/NivelRisco"
+          },
+          "riscoDescricao": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NivelRisco": {
+        "enum": [
+          "Normal",
+          "Atencao",
+          "Alerta",
+          "Critico"
+        ],
+        "type": "string"
+      },
+      "OcorrenciaResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipo": {
+            "$ref": "#/components/schemas/TipoOcorrencia"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "severidade": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apelido": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusOcorrencia"
+          },
+          "criadoEmUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "resolvidaEmUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OcorrenciaResponsePaginaResponse": {
+        "type": "object",
+        "properties": {
+          "itens": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OcorrenciaResponse"
+            },
+            "nullable": true
+          },
+          "pagina": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tamanhoPagina": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPaginas": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PainelResponse": {
+        "type": "object",
+        "properties": {
+          "geradoEmUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalSensoresAtivos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalOcorrenciasAbertas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalAlertasAtivos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "riscoGeral": {
+            "$ref": "#/components/schemas/NivelRisco"
+          },
+          "bairros": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResumoBairroResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      },
+      "RegistrarLeituraRequest": {
+        "type": "object",
+        "properties": {
+          "codigoSensor": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelAguaCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "chuvaMmH": {
+            "type": "number",
+            "format": "double"
+          },
+          "dataHoraUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistrarLeituraResponse": {
+        "type": "object",
+        "properties": {
+          "leitura": {
+            "$ref": "#/components/schemas/LeituraResponse"
+          },
+          "alertaGerado": {
+            "$ref": "#/components/schemas/AlertaResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResumoBairroResponse": {
+        "type": "object",
+        "properties": {
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "sensores": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "riscoAtual": {
+            "$ref": "#/components/schemas/NivelRisco"
+          },
+          "riscoDescricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "maiorNivelCm": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ocorrenciasAbertas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "alertasAtivos": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SensorResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "bairro": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "nivelAlertaCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "nivelCriticoCm": {
+            "type": "number",
+            "format": "double"
+          },
+          "ativo": {
+            "type": "boolean"
+          },
+          "ultimoNivelCm": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "ultimoRisco": {
+            "$ref": "#/components/schemas/NivelRisco"
+          },
+          "ultimaLeituraUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StatusOcorrencia": {
+        "enum": [
+          "Aberta",
+          "EmAnalise",
+          "Resolvida",
+          "Descartada"
+        ],
+        "type": "string"
+      },
+      "TipoOcorrencia": {
+        "enum": [
+          "RuaAlagada",
+          "BueiroEntupido",
+          "CorregoTransbordando",
+          "ImovelAtingido",
+          "Outro"
+        ],
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "DeviceKey": {
+        "type": "apiKey",
+        "description": "Chave dos dispositivos IoT (POST /api/leituras).",
+        "name": "X-Device-Key",
+        "in": "header"
+      }
+    }
+  }
+}

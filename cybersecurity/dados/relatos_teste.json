@@ -1,0 +1,12 @@
+[
+  {"id": "T01", "bairro": "Jardim Pantanal", "descricao": "Rua alagada na altura do joelho perto da escola", "contato": ""},
+  {"id": "T02", "bairro": "Jardim Pantanal", "descricao": "Minha mãe é cadeirante e a água entrou em casa, precisamos de ajuda. Meu CPF é 529.982.247-25", "contato": "(11) 98765-4321"},
+  {"id": "T03", "bairro": "Aricanduva", "descricao": "Bueiro entupido. Moro na Rua das Flores, 123, liguem no 11 91234-5678", "contato": "morador.teste@example.com"},
+  {"id": "T04", "bairro": "Ipiranga", "descricao": "Córrego subindo rápido, tenho asma e não consigo sair", "contato": ""},
+  {"id": "T05", "bairro": "Pacaembu", "descricao": "Galeria transbordando. senha: Enchente@2026 do wifi da associação", "contato": ""},
+  {"id": "T06", "bairro": "Aricanduva", "descricao": "Carro preso na água, CID J45 do meu filho, remédio acabou", "contato": ""},
+  {"id": "T07", "bairro": "Ipiranga", "descricao": "Água baixou, situação normalizada na avenida", "contato": ""},
+  {"id": "T08", "bairro": "Jardim Pantanal", "descricao": "Pagamento da doação no cartão 4111 1111 1111 1111", "contato": ""},
+  {"id": "T09", "bairro": "Pacaembu", "descricao": "Número 123.456.789-00 é só o protocolo antigo", "contato": ""},
+  {"id": "T10", "bairro": "Ipiranga", "descricao": "Sensor AQG-004 com chave sk-test_AbCdEfGhIjKlMnOpQrSt exposta no poste", "contato": ""}
+]

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "author": "Guilherme Cezarino Simoes e Fabrini Soares",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrassom", "top": -170, "left": -60, "attrs": { "distance": "150" } },
+    { "type": "wokwi-potentiometer", "id": "chuva", "top": 150, "left": -190, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -180, "left": 200, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-led", "id": "led_verde", "top": 60, "left": 250, "attrs": { "color": "green", "label": "Normal" } },
+    { "type": "wokwi-led", "id": "led_amarelo", "top": 60, "left": 300, "attrs": { "color": "yellow", "label": "Atencao" } },
+    { "type": "wokwi-led", "id": "led_vermelho", "top": 60, "left": 350, "attrs": { "color": "red", "label": "Alerta" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 140, "left": 240, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 140, "left": 290, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r3", "top": 140, "left": 340, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 40, "left": 420, "attrs": { "volume": "0.2" } },
+    { "type": "wokwi-pushbutton", "id": "botao", "top": 230, "left": 250, "attrs": { "color": "blue", "label": "Silenciar" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+
+    [ "ultrassom:VCC", "esp:5V", "red", [] ],
+    [ "ultrassom:GND", "esp:GND.1", "black", [] ],
+    [ "ultrassom:TRIG", "esp:5", "orange", [] ],
+    [ "ultrassom:ECHO", "esp:18", "purple", [] ],
+
+    [ "chuva:VCC", "esp:3V3", "red", [] ],
+    [ "chuva:GND", "esp:GND.1", "black", [] ],
+    [ "chuva:SIG", "esp:34", "blue", [] ],
+
+    [ "lcd:VCC", "esp:5V", "red", [] ],
+    [ "lcd:GND", "esp:GND.2", "black", [] ],
+    [ "lcd:SDA", "esp:21", "green", [] ],
+    [ "lcd:SCL", "esp:22", "gold", [] ],
+
+    [ "esp:25", "led_verde:A", "green", [] ],
+    [ "led_verde:C", "r1:1", "black", [] ],
+    [ "esp:26", "led_amarelo:A", "yellow", [] ],
+    [ "led_amarelo:C", "r2:1", "black", [] ],
+    [ "esp:27", "led_vermelho:A", "red", [] ],
+    [ "led_vermelho:C", "r3:1", "black", [] ],
+    [ "r1:2", "esp:GND.2", "black", [] ],
+    [ "r2:2", "esp:GND.2", "black", [] ],
+    [ "r3:2", "esp:GND.2", "black", [] ],
+
+    [ "esp:14", "buzzer:2", "orange", [] ],
+    [ "buzzer:1", "esp:GND.2", "black", [] ],
+
+    [ "esp:4", "botao:1.l", "blue", [] ],
+    [ "botao:2.l", "esp:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}

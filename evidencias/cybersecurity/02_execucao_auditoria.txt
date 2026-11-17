@@ -1,0 +1,6 @@
+﻿Registros: 13 | PII detectadas: 11 | por categoria: {'identificador': 1, 'contato': 3, 'localizacao': 1, 'financeiro': 1, 'credencial': 2, 'saude': 3}
+Taint v1 (sem proteção): 28 vazamentos | v2: 28 bloqueados
+Taint estático: 5 fluxos inseguros -> pipeline_vulneravel.py:23, pipeline_vulneravel.py:24, pipeline_vulneravel.py:27, pipeline_vulneravel.py:30, pipeline_vulneravel.py:31
+IRC antes: 92.4 (Crítico) | depois: 17.9 (Baixo)
+Motor de tradução: offline (sem credencial de LLM) | Auditoria íntegra: True (54 registros)
+Dashboard: ..\evidencias\cybersecurity\dashboard.html

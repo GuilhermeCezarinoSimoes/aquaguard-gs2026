@@ -1,0 +1,8 @@
+,Treino (ajuste completo),Treino (CV out-of-fold),Teste 2023-2025
+ROC-AUC,0.845,0.76,0.792
+PR-AUC,0.286,0.164,0.208
+Recall (chuvas fortes detectadas),0.786,0.6,0.689
+Precisão (alertas corretos),0.191,0.159,0.179
+F1,0.308,0.251,0.284
+Acurácia balanceada,0.774,0.687,0.723
+Brier,0.176,0.175,0.183

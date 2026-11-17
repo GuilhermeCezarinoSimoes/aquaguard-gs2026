@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AquaGuard · Painel</title>
+<style>
+  :root{--bg:#f5f7fa;--card:#fff;--txt:#0f172a;--muted:#64748b;--line:#e2e8f0;
+        --normal:#16a34a;--atencao:#ca8a04;--alerta:#ea580c;--critico:#dc2626;--brand:#0369a1}
+  @media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#111a2e;--txt:#e5e7eb;--muted:#94a3b8;--line:#1e293b}}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt)}
+  header{padding:24px 16px 8px;max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+  h1{margin:0;font-size:28px;letter-spacing:-.02em} h1 span{color:var(--brand)}
+  .sub{color:var(--muted);font-size:14px}
+  main{max-width:1100px;margin:auto;padding:8px 16px 40px;display:grid;gap:16px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .kpi .v{font-size:32px;font-weight:700} .kpi .l{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)} th{color:var(--muted);font-weight:600;font-size:13px}
+  .pill{display:inline-block;padding:2px 10px;border-radius:999px;color:#fff;font-weight:600;font-size:13px}
+  .Normal{background:var(--normal)} .Atencao{background:var(--atencao)} .Alerta{background:var(--alerta)} .Critico{background:var(--critico)}
+  .alerta{border-left:6px solid var(--alerta);padding:12px 14px;margin:8px 0;border-radius:10px;background:var(--bg)}
+  .alerta.Critico{border-color:var(--critico)}
+  a{color:var(--brand)} .scroll{overflow-x:auto}
+  #erro{display:none;color:var(--critico)}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Aqua<span>Guard</span></h1>
+    <div class="sub">Monitoramento de alagamentos por bairro · São Paulo</div>
+  </div>
+  <div class="sub">Atualizado: <span id="hora">—</span> · <a href="/swagger">API (Swagger)</a></div>
+</header>
+<main>
+  <p id="erro" role="alert">Não foi possível carregar os dados da API.</p>
+  <section class="kpis" aria-label="Indicadores">
+    <div class="card kpi"><div class="l">Risco geral</div><div class="v" id="kRisco">—</div></div>
+    <div class="card kpi"><div class="l">Sensores ativos</div><div class="v" id="kSens">—</div></div>
+    <div class="card kpi"><div class="l">Alertas ativos</div><div class="v" id="kAlert">—</div></div>
+    <div class="card kpi"><div class="l">Ocorrências abertas</div><div class="v" id="kOcor">—</div></div>
+  </section>
+  <section class="card" aria-labelledby="tAlertas"><h2 id="tAlertas">Alertas ativos</h2><div id="alertas">—</div></section>
+  <section class="card" aria-labelledby="tBairros"><h2 id="tBairros">Bairros</h2>
+    <div class="scroll"><table><thead><tr><th>Bairro</th><th>Risco</th><th>Sensores</th><th>Maior nível</th><th>Ocorrências</th></tr></thead><tbody id="bairros"></tbody></table></div>
+  </section>
+  <section class="card" aria-labelledby="tSens"><h2 id="tSens">Sensores</h2>
+    <div class="scroll"><table><thead><tr><th>Código</th><th>Local</th><th>Nível (cm)</th><th>Limites</th><th>Risco</th></tr></thead><tbody id="sensores"></tbody></table></div>
+  </section>
+</main>
+<script>
+const rotulo = {Normal:"Normal",Atencao:"Atenção",Alerta:"Alerta",Critico:"Crítico"};
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pill = r => `<span class="pill ${esc(r)}">${rotulo[r] ?? esc(r)}</span>`;
+async function carregar(){
+  try{
+    const [p, s, a] = await Promise.all(["/api/painel","/api/sensores","/api/alertas"].map(u => fetch(u).then(r => { if(!r.ok) throw r; return r.json(); })));
+    document.getElementById("erro").style.display = "none";
+    kRisco.innerHTML = pill(p.riscoGeral); kSens.textContent = p.totalSensoresAtivos;
+    kAlert.textContent = p.totalAlertasAtivos; kOcor.textContent = p.totalOcorrenciasAbertas;
+    bairros.innerHTML = p.bairros.map(b => `<tr><td>${esc(b.bairro)}</td><td>${pill(b.riscoAtual)}</td><td>${b.sensores}</td><td>${b.maiorNivelCm ?? "—"}</td><td>${b.ocorrenciasAbertas}</td></tr>`).join("");
+    sensores.innerHTML = s.map(x => `<tr><td>${esc(x.codigo)}</td><td>${esc(x.nome)}<br><span class="sub">${esc(x.bairro)}</span></td><td>${x.ultimoNivelCm ?? "—"}</td><td>${x.nivelAlertaCm} / ${x.nivelCriticoCm}</td><td>${x.ultimoRisco ? pill(x.ultimoRisco) : "—"}</td></tr>`).join("");
+    alertas.innerHTML = a.length ? a.map(x => `<div class="alerta ${esc(x.nivel)}">${pill(x.nivel)} <strong>${esc(x.bairro)}</strong><br>${esc(x.mensagem)}</div>`).join("") : "<p class='sub'>Nenhum alerta ativo. 👍</p>";
+    hora.textContent = new Date().toLocaleTimeString("pt-BR");
+  }catch(e){ document.getElementById("erro").style.display = "block"; }
+}
+carregar(); setInterval(carregar, 10000);
+</script>
+</body>
+</html>

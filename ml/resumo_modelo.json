@@ -1,0 +1,37 @@
+{
+  "melhores_parametros": {
+    "max_depth": 4,
+    "min_samples_leaf": 30,
+    "n_estimators": 150
+  },
+  "limiar": 0.56,
+  "metricas": {
+    "Treino (ajuste completo)": {
+      "ROC-AUC": 0.845,
+      "PR-AUC": 0.286,
+      "Recall (chuvas fortes detectadas)": 0.786,
+      "Precisão (alertas corretos)": 0.191,
+      "F1": 0.308,
+      "Acurácia balanceada": 0.774,
+      "Brier": 0.176
+    },
+    "Treino (CV out-of-fold)": {
+      "ROC-AUC": 0.76,
+      "PR-AUC": 0.164,
+      "Recall (chuvas fortes detectadas)": 0.6,
+      "Precisão (alertas corretos)": 0.159,
+      "F1": 0.251,
+      "Acurácia balanceada": 0.687,
+      "Brier": 0.175
+    },
+    "Teste 2023-2025": {
+      "ROC-AUC": 0.792,
+      "PR-AUC": 0.208,
+      "Recall (chuvas fortes detectadas)": 0.689,
+      "Precisão (alertas corretos)": 0.179,
+      "F1": 0.284,
+      "Acurácia balanceada": 0.723,
+      "Brier": 0.183
+    }
+  }
+}

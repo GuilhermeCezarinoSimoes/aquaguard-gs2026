@@ -1,0 +1,10 @@
+AquaGuard - CitizenTech de prevencao de alagamentos
+FIAP - Global Solution 2026.2 - Engenharia de Software - 3o ano
+Physical Computing: IoT & IoB
+
+Integrantes:
+1. Guilherme Cezarino Simoes
+2. Fabrini Soares
+
+Link do projeto Wokwi: <PREENCHER APOS SALVAR O PROJETO NO WOKWI>
+Link do video (ate 4 min): <PREENCHER APOS PUBLICAR NO YOUTUBE>

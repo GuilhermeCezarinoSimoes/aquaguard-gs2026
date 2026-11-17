@@ -1,0 +1,101 @@
+[
+  {
+    "regra": "SAUDE_CONTEXTO",
+    "categoria": "saude",
+    "caminho": "relato:T02.descricao",
+    "mascarado": "[DADO DE SAÚDE REMOVIDO]",
+    "hash": "d335e66eb170",
+    "peso": 9,
+    "base_legal": "LGPD art. 5º, II (dado sensível)"
+  },
+  {
+    "regra": "CPF",
+    "categoria": "identificador",
+    "caminho": "relato:T02.descricao",
+    "mascarado": "***.***.***-25",
+    "hash": "7281dfb5e8be",
+    "peso": 7,
+    "base_legal": "LGPD art. 5º, I"
+  },
+  {
+    "regra": "TELEFONE",
+    "categoria": "contato",
+    "caminho": "relato:T02.contato",
+    "mascarado": "***21",
+    "hash": "4fd70d38eff6",
+    "peso": 4,
+    "base_legal": "LGPD art. 5º, I"
+  },
+  {
+    "regra": "ENDERECO_RESIDENCIAL",
+    "categoria": "localizacao",
+    "caminho": "relato:T03.descricao",
+    "mascarado": "********",
+    "hash": "a665a4592042",
+    "peso": 4,
+    "base_legal": "LGPD art. 5º, I"
+  },
+  {
+    "regra": "TELEFONE",
+    "categoria": "contato",
+    "caminho": "relato:T03.descricao",
+    "mascarado": "***78",
+    "hash": "77b893dbda6c",
+    "peso": 4,
+    "base_legal": "LGPD art. 5º, I"
+  },
+  {
+    "regra": "EMAIL",
+    "categoria": "contato",
+    "caminho": "relato:T03.contato",
+    "mascarado": "m***@example.com",
+    "hash": "5c02ff11c4ec",
+    "peso": 4,
+    "base_legal": "LGPD art. 5º, I"
+  },
+  {
+    "regra": "SAUDE_CONTEXTO",
+    "categoria": "saude",
+    "caminho": "relato:T04.descricao",
+    "mascarado": "[DADO DE SAÚDE REMOVIDO]",
+    "hash": "9289d827da51",
+    "peso": 9,
+    "base_legal": "LGPD art. 5º, II (dado sensível)"
+  },
+  {
+    "regra": "SENHA",
+    "categoria": "credencial",
+    "caminho": "relato:T05.descricao",
+    "mascarado": "[CREDENCIAL REMOVIDA]",
+    "hash": "158a323a7ba4",
+    "peso": 10,
+    "base_legal": "LGPD art. 5º, I"
+  },
+  {
+    "regra": "CID10",
+    "categoria": "saude",
+    "caminho": "relato:T06.descricao",
+    "mascarado": "[DADO DE SAÚDE REMOVIDO]",
+    "hash": "811786ad1ae7",
+    "peso": 9,
+    "base_legal": "LGPD art. 5º, II (dado sensível)"
+  },
+  {
+    "regra": "CARTAO_CREDITO",
+    "categoria": "financeiro",
+    "caminho": "relato:T08.descricao",
+    "mascarado": "***11",
+    "hash": "9bbef1947662",
+    "peso": 8,
+    "base_legal": "LGPD art. 5º, I"
+  },
+  {
+    "regra": "TOKEN_API",
+    "categoria": "credencial",
+    "caminho": "relato:T10.descricao",
+    "mascarado": "[CREDENCIAL REMOVIDA]",
+    "hash": "a49936c0e72b",
+    "peso": 10,
+    "base_legal": "LGPD art. 5º, I"
+  }
+]

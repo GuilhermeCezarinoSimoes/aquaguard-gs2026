@@ -1,0 +1,69 @@
+﻿
+  Aprovado AquaGuard.Tests.Dominio.CoordenadaTests.Distancia_SePaulista_ParaSe_Aprox3Km [5 ms]
+  Aprovado AquaGuard.Tests.Dominio.AlertaTests.NivelNormal_NaoGeraAlerta [4 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.RegistrarLeitura_NoFuturo_LancaDomainException [4 ms]
+  Aprovado AquaGuard.Tests.Dominio.OcorrenciaTests.ResolverDuasVezes_LancaDomainException [4 ms]
+  Aprovado AquaGuard.Tests.Dominio.OcorrenciaTests.DadosInvalidos_LancaDomainException(descricao: "Descrição válida", 
+severidade: 0) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CoordenadaTests.Invalida_LancaDomainException(lat: 0, lon: -181) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.RegistrarLeitura_ValoresForaDaFaixa_LancaDomainException(nivel: -1, 
+chuva: 0) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.OcorrenciaTests.DadosInvalidos_LancaDomainException(descricao: "abc", severidade: 
+3) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.RegistrarLeitura_ValoresForaDaFaixa_LancaDomainException(nivel: 10, 
+chuva: -5) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CoordenadaTests.Invalida_LancaDomainException(lat: 91, lon: 0) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.OcorrenciaTests.DadosInvalidos_LancaDomainException(descricao: "Descrição válida", 
+severidade: 6) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.RegistrarLeitura_ValoresForaDaFaixa_LancaDomainException(nivel: 1001, 
+chuva: 0) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.AlertaTests.Encerrar_DuasVezes_LancaDomainException [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.Construtor_NormalizaCodigo [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.DefinirLimites_Invalidos_LancaDomainException(alerta: 100, critico: 
+100) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.DefinirLimites_Invalidos_LancaDomainException(alerta: 120, critico: 80) 
+[< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.DefinirLimites_Invalidos_LancaDomainException(alerta: 0, critico: 100) 
+[< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 0, chuva: 60, esperado: 
+Critico) [9 ms]
+  Aprovado AquaGuard.Tests.Dominio.OcorrenciaTests.FluxoCompleto_AbertaAnaliseResolvida [1 ms]
+  Aprovado AquaGuard.Tests.Dominio.AlertaTests.Escalar_NuncaReduzNivel [1 ms]
+  Aprovado AquaGuard.Tests.Dominio.OcorrenciaTests.IniciarAnalise_ForaDeAberta_LancaDomainException [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 0, chuva: 12, esperado: 
+Atencao) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.OcorrenciaTests.Apelido_EmBranco_ViraNulo [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 60, chuva: 0, esperado: 
+Atencao) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.RegistrarLeitura_Valida_AdicionaNaColecao [1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 70, chuva: 30, esperado: 
+Alerta) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 110, chuva: 30, esperado: 
+Critico) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 100, chuva: 0, esperado: 
+Alerta) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 10, chuva: 0, esperado: 
+Normal) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 0, chuva: 30, esperado: 
+Alerta) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.Calcular_RetornaPiorCaso(nivel: 150, chuva: 0, esperado: 
+Critico) [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.SensorTests.RegistrarLeitura_SensorInativo_LancaDomainException [< 1 ms]
+  Aprovado AquaGuard.Tests.Dominio.CalculadoraRiscoTests.SemRegras_LancaArgumentException [< 1 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Health_Retorna200 [1 s]
+  Aprovado AquaGuard.Tests.Integracao.ChaveDispositivoTests.ComChaveCorreta_Retorna201 [1 s]
+  Aprovado AquaGuard.Tests.Integracao.ChaveDispositivoTests.SemChave_Retorna401 [8 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Ocorrencia_CriarEResolver_FluxoCompleto [99 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.CriarSensor_PayloadInvalido_Retorna400 [19 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Sensores_Seed_RetornaCincoPontos [39 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Ocorrencias_ListagemPaginada [43 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.CriarSensor_CodigoDuplicado_Retorna422 [12 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Leitura_SensorDesconhecido_Retorna404 [9 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Sensor_Inexistente_Retorna404ProblemDetails [18 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Swagger_DocumentoDisponivel [95 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Historico_RetornaLeiturasMaisRecentesPrimeiro [38 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Leitura_Normal_NaoGeraAlerta [4 ms]
+  Aprovado AquaGuard.Tests.Integracao.ApiTests.Leitura_Critica_GeraAlertaNoBairro_EApareceNoPainel [112 ms]
+     Aprovados: 47
+
+

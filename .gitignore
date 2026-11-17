@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+ml/.cache_inmet/
+
+# .NET
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+TestResults/
+
+# Node / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+mobile/.env
+*.log
+
+# Sistema / IDE
+.DS_Store
+Thumbs.db
+.vs/
+.idea/
+
+# Saídas locais da auditoria (as evidências oficiais ficam em evidencias/)
+cybersecurity/saida/

@@ -1,0 +1,21 @@
+[Unit]
+Description=AquaGuard - monitor de infraestrutura (CPU, memoria, disco, API)
+After=network-online.target aquaguard-api.service
+StartLimitIntervalSec=300
+StartLimitBurst=20
+
+[Service]
+Type=notify
+NotifyAccess=all
+ExecStart=/opt/aquaguard-infra/scripts/03_monitor.sh
+# Tolerante a falhas: se o processo morrer, travar (sem WATCHDOG=1 em 120 s) ou for morto, o systemd reinicia
+Restart=always
+RestartSec=5
+WatchdogSec=120
+SyslogIdentifier=aquaguard-monitor
+Nice=5
+RuntimeDirectory=aquaguard-monitor
+RuntimeDirectoryPreserve=yes
+
+[Install]
+WantedBy=multi-user.target

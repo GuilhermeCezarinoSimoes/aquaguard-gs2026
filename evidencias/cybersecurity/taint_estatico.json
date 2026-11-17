@@ -1,0 +1,53 @@
+[
+  {
+    "arquivo": "prototipo/pipeline_vulneravel.py",
+    "linha": 23,
+    "sink": "log.info",
+    "tipo_sink": "log",
+    "variaveis": [
+      "relato"
+    ],
+    "trecho": "log.info(\"Novo relato recebido: %s\", relato)                     # VULN: payload completo no log"
+  },
+  {
+    "arquivo": "prototipo/pipeline_vulneravel.py",
+    "linha": 24,
+    "sink": "print",
+    "tipo_sink": "console",
+    "variaveis": [
+      "contato"
+    ],
+    "trecho": "print(f\"[debug] contato do cidadão: {contato}\")                  # VULN: PII no console"
+  },
+  {
+    "arquivo": "prototipo/pipeline_vulneravel.py",
+    "linha": 27,
+    "sink": "responder_publico",
+    "tipo_sink": "resposta_publica_api",
+    "variaveis": [
+      "relato",
+      "texto_publico"
+    ],
+    "trecho": "responder_publico({\"bairro\": relato[\"bairro\"], \"texto\": texto_publico})  # VULN: feed público sem máscara"
+  },
+  {
+    "arquivo": "prototipo/pipeline_vulneravel.py",
+    "linha": 30,
+    "sink": "enviar_llm",
+    "tipo_sink": "llm_terceiro",
+    "variaveis": [
+      "resumo"
+    ],
+    "trecho": "enviar_llm(resumo)                                                # VULN: dado pessoal para LLM de terceiro"
+  },
+  {
+    "arquivo": "prototipo/pipeline_vulneravel.py",
+    "linha": 31,
+    "sink": "requests.post",
+    "tipo_sink": "http_externo",
+    "variaveis": [
+      "relato"
+    ],
+    "trecho": "requests.post(\"https://analytics.exemplo.com/eventos\", json=relato, timeout=5)  # VULN: terceiro"
+  }
+]
