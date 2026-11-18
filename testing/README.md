@@ -16,7 +16,7 @@ Todas as Features correspondem a funcionalidades **implementadas** (API, app, Io
 TC01–TC08, TC10, TC14–TC17 e TC19–TC21 também estão cobertos por testes automatizados em `backend/tests`.
 
 ## Passo a passo no Azure DevOps (ação da equipe — exige login)
-1. https://dev.azure.com → **New project** `AquaGuard-GS2026` (processo **Agile**, visibilidade privada).
+1. https://dev.azure.com → **New project** com o nome exato `AquaGuard` (o CSV usa esse nome como Area Path) (processo **Agile**, visibilidade privada).
 2. **Project settings ▸ Permissions ▸ Project Administrators ▸ Add** → e-mail do professor (perfil Admin).
 3. **Boards ▸ Work items ▸ Import Work Items** → `azure_import_features.csv` → *Save items*.
 4. Repita com `azure_import_test_cases.csv` (cada Test Case entra com seus passos).

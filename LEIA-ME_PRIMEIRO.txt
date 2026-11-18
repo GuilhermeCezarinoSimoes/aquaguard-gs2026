@@ -1,0 +1,16 @@
+=====================================================================
+  AQUAGUARD - GLOBAL SOLUTION FIAP 2026.2
+  Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+=====================================================================
+
+VAI TERMINAR A ENTREGA? COMECE POR AQUI:
+
+  1. Abra a pasta  ENTREGAS_POR_DISCIPLINA
+  2. Leia o arquivo  00_COMECE_AQUI.md  (abre com o Bloco de Notas)
+  3. Siga as pastas na ordem. Cada uma tem um PASSO_A_PASSO.md
+     explicando o que fazer e o que enviar no Teams.
+
+PRAZO: quinta-feira 19/11/2026 as 23h55.
+
+NAO mova nem renomeie as pastas backend, mobile, ml, cybersecurity,
+iot, operating-systems e testing: os programas dependem desses nomes.

@@ -15,7 +15,7 @@ AquaGuard: a **API C# (.NET 8) com painel web e Swagger** (`../backend`), atrás
                      │ 127.0.0.1:5080
    systemd ──► aquaguard-api.service  (Restart=always, hardening, usuário sem shell)
                      │ SQLite /var/lib/aquaguard/aquaguard.db
-   systemd ──► aquaguard-monitor.service (Type=notify, WatchdogSec, Restart=always)
+   systemd ──► aquaguard-monitor.service (Restart=always, RestartSec=5)
                      └─► /var/log/aquaguard/{metricas.jsonl, alertas.log, *.log, auditoria_execucao.log}
    auditd   ──► regras -k aquaguard_* (config, serviços, binários, scripts)
 ```
@@ -27,7 +27,7 @@ AquaGuard: a **API C# (.NET 8) com painel web e Swagger** (`../backend`), atrás
 | `scripts/01_provisionar_infra.sh` | Pacotes, **hostname**, `/etc/hosts`, **DNS** (systemd-resolved), **IP** (DHCP ou estático via netplan), fuso, usuário de serviço, **firewall UFW**, **auditd**, logrotate, journald persistente | Provisionamento de infra (redes, DNS, IP) — 2 pts |
 | `scripts/02_provisionar_app.sh` | **.NET 8 SDK**, código, `dotnet test`, `dotnet publish`, **variáveis de ambiente** (`/etc/aquaguard/api.env`, chave IoT gerada), **systemd**, **nginx**, health check | Provisionamento da aplicação (dependências, configurações, orquestração) — 2 pts |
 | `scripts/03_monitor.sh` | Coleta CPU (/proc/stat), memória (MemAvailable), disco (df), health HTTP, serviços; grava métricas JSONL; **alertas** na transição OK→ALERTA→OK | Monitoramento com alertas de CPU, Disco e Memória — 2 pts |
-| `systemd/aquaguard-monitor.service` | Monitor como serviço: `Restart=always`, `WatchdogSec=120` (reinicia se travar), `StartLimitBurst` | Monitoramento como serviço tolerante a falhas — 1 pt |
+| `systemd/aquaguard-monitor.service` | Monitor como serviço: `Restart=always` (reinicia em 5 s se morrer ou for morto), `StartLimitBurst` | Monitoramento como serviço tolerante a falhas — 1 pt |
 | `systemd/aquaguard-api.service` | API com `Restart=always`, `ProtectSystem=strict`, `NoNewPrivileges`, `MemoryMax` | Tolerância a falhas da aplicação |
 | `scripts/lib/comum.sh` | Log padronizado (arquivo + journald), **trilha de auditoria** de toda execução (quem, quando, args, resultado, duração), trap de erro | Logs de auditoria e execução — 1 pt |
 | `scripts/05_relatorio_auditoria.sh` | Consolida execuções, alertas, métricas, journal, **auditd**, acessos nginx, firewall | Logs de auditoria |

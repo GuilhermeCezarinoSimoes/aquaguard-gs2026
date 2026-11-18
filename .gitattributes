@@ -4,3 +4,4 @@
 *.env.example text eol=lf
 *.ipynb text eol=lf
 ml/dados/raw/*.csv -text
+*.bat text eol=crlf

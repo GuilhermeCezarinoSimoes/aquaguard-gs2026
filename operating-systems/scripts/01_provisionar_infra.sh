@@ -43,7 +43,7 @@ Domains=${AQG_DOMINIO}
 DNSSEC=allow-downgrade
 EOF
   systemctl restart systemd-resolved
-  resolvectl status | grep -E "DNS Servers|DNS Domain" | head -4 | while read -r l; do log INFO "DNS: ${l}"; done
+  { resolvectl status | grep -E "DNS Servers|DNS Domain" | head -4 || true; } | while read -r l; do log INFO "DNS: ${l}"; done
 }
 
 configurar_rede() {
@@ -120,7 +120,9 @@ validar() {
   log INFO "Hostname: $(hostname -f 2>/dev/null || hostname)"
   getent hosts "api.${AQG_DOMINIO}" >/dev/null && log OK "api.${AQG_DOMINIO} resolve localmente" || log ERRO "api.${AQG_DOMINIO} não resolve"
   if getent hosts portal.inmet.gov.br >/dev/null; then log OK "DNS externo funcionando"; else log ALERTA "DNS externo sem resposta"; fi
-  auditctl -l | grep -c aquaguard | xargs -I{} log OK "{} regras de auditoria AquaGuard ativas"
+  local regras
+  regras="$(auditctl -l 2>/dev/null | grep -c aquaguard || true)"
+  log OK "${regras} regras de auditoria AquaGuard ativas"
 }
 
 passo "Instalando pacotes base"                 configurar_pacotes_base

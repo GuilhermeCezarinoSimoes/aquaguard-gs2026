@@ -17,6 +17,8 @@ CENARIOS = {
     # (nível da água cm, chuva mm/h) a cada passo
     "normal": [(15, 0), (16, 1), (15, 0)],
     "enchente": [(20, 5), (35, 12), (55, 22), (75, 30), (95, 38), (125, 55), (110, 20), (70, 5), (40, 0)],
+    # termina no pico (ideal para gravar vídeos: o app fica em PERIGO)
+    "subindo": [(20, 5), (35, 12), (55, 22), (75, 30), (95, 38), (125, 55)],
 }
 
 
