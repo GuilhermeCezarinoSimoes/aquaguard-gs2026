@@ -3,14 +3,26 @@
   Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
 =====================================================================
 
-VAI TERMINAR A ENTREGA? COMECE POR AQUI:
+VAI TERMINAR A ENTREGA? FACA SO ISTO:
 
-  1. Abra a pasta  ENTREGAS_POR_DISCIPLINA
-  2. Leia o arquivo  00_COMECE_AQUI.md  (abre com o Bloco de Notas)
-  3. Siga as pastas na ordem. Cada uma tem um PASSO_A_PASSO.md
-     explicando o que fazer e o que enviar no Teams.
+  >>> De DOIS CLIQUES no arquivo  GUIA_PARA_TERMINAR_O_PROJETO.html
+      (esta na mesma pasta deste arquivo). Ele abre no navegador.
+
+  Esse guia explica TUDO, materia por materia:
+    - o que o professor pede
+    - o que ja esta pronto
+    - o que voce precisa fazer, clique a clique
+    - o roteiro de cada video (com as falas)
+    - o texto pronto para enviar no Teams (botao "Copiar")
+
+  Os atalhos de dois cliques (.bat) ficam em:
+    ENTREGAS_POR_DISCIPLINA\00_PREPARAR_COMPUTADOR
+
+  Os arquivos de cada materia ficam em:
+    ENTREGAS_POR_DISCIPLINA\01_... ate 08_...
 
 PRAZO: quinta-feira 19/11/2026 as 23h55.
+REPOSITORIO (link do GitHub): https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 
 NAO mova nem renomeie as pastas backend, mobile, ml, cybersecurity,
 iot, operating-systems e testing: os programas dependem desses nomes.
