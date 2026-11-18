@@ -21,6 +21,10 @@ VAI TERMINAR A ENTREGA? FACA SO ISTO:
   Os arquivos de cada materia ficam em:
     ENTREGAS_POR_DISCIPLINA\01_... ate 08_...
 
+  QUER AJUDA DE IA? Abra PROMPT_PARA_O_CLAUDE.txt, copie o texto entre
+  INICIO DO PROMPT e FIM DO PROMPT e cole no Claude (explica tudo o
+  que ja foi feito, links e o que falta).
+
 PRAZO: quinta-feira 19/11/2026 as 23h55.
 REPOSITORIO (link do GitHub): https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 

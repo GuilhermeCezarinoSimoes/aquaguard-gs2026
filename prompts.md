@@ -32,5 +32,12 @@ do nível de alerta); fórmula do Indicador de Risco Cidadão.
   técnicas em alertas ao cidadão. Prompt de sistema registrado na constante `SISTEMA` do arquivo. Somente dados
   mascarados são enviados.
 
+## Prompt 2 — 18/11/2026 (Claude Code)
+**Autor:** Guilherme Cezarino Simoes
+**Resumo:** pedir guias passo a passo para um colaborador leigo terminar a entrega, separados por disciplina, atalhos de
+dois cliques, publicação no GitHub, guia único em HTML e um prompt de passagem de contexto.
+**Resultado:** pasta `ENTREGAS_POR_DISCIPLINA/`, `GUIA_PARA_TERMINAR_O_PROJETO.html`, `PROMPT_PARA_O_CLAUDE.md`; repositório
+publicado; correção de duas falhas nos scripts de Linux encontradas na revisão.
+
 ## Próximos prompts
 Registre aqui qualquer novo uso de IA (data, autor, objetivo, prompt resumido, o que foi aproveitado).
