@@ -107,7 +107,7 @@ Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
 Projeto Azure DevOps (professor incluído como Admin): https://dev.azure.com/XXXX/AquaGuard
 PDF com os prints das Features e dos Test Cases em anexo.
 PITCH (4 min): https://youtu.be/XXXXXXXX
-Repositório: https://github.com/SEU-USUARIO/aquaguard-gs2026
+Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 ```
 
 ## Deu erro?

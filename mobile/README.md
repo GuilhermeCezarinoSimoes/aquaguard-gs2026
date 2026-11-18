@@ -11,7 +11,7 @@
 | **Problema, em uma frase** | Quem mora perto de córregos de São Paulo só percebe a enchente quando a água já está na porta, sem tempo de proteger a família e os bens. |
 | **Como funciona** | Sensores ESP32 medem o nível dos córregos e a chuva → API calcula o risco e emite alerta do bairro → o app mostra a situação e o que fazer; moradores relatam alagamentos; um modelo de ML com dados do INMET avisa na véspera a chance de chuva forte. |
 | **O que cada parte faz** | IoT: mede e alerta no local · API C#: regras, banco e alertas · App: consulta, alerta e relato · ML: previsão de chuva forte · Cyber: protege dados dos relatos · Linux: hospeda e monitora |
-| **Link do repositório** | _<inserir após publicar no GitHub>_ |
+| **Link do repositório** | [https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026](https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026) |
 | **Indicador de impacto** | Minutos de antecedência entre o alerta e a água na rua; nº de relatos resolvidos; % de chuvas fortes avisadas na véspera (69 % no teste do ML) |
 | **ODS conectados** | 11 (cidades resilientes — meta 11.5, reduzir mortes e perdas por desastres), 13 (adaptação ao clima — meta 13.1), 3 (saúde — evitar leptospirose e afogamentos), 10 (redução das desigualdades — áreas periféricas são as mais afetadas) |
 

@@ -16,14 +16,14 @@ documentação dos endpoints (Swagger) e evidências. Entrega: **link do GitHub*
 O mapa completo de "critério → arquivo" está em `backend\README.md`, seção **"Mapa dos critérios"**.
 
 ## O que VOCÊ precisa fazer
-1. Publicar no GitHub (se ainda não fez) — `00_PREPARAR_COMPUTADOR\PASSO_A_PASSO.md`, Parte 3.
-2. Enviar no Teams.
+1. O projeto **já está no GitHub**: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
+2. Enviar no Teams o texto abaixo.
 
-## O que enviar no Teams (copie e cole, trocando o link)
+## O que enviar no Teams (copie e cole — já está com o link certo)
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard
 Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
-Repositório: https://github.com/SEU-USUARIO/aquaguard-gs2026
+Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 Projeto C# (.NET 8 Web API + EF Core): pasta /backend – instruções em /backend/README.md
 Documentação: Swagger em /swagger · Evidências: /evidencias/backend (47 testes aprovados)
 ```

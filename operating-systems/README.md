@@ -40,7 +40,7 @@ rede NAT com redirecionamento da porta 80 (ou modo bridge) e acesso à internet.
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git
-git clone <URL-DO-REPOSITORIO> aquaguard && cd aquaguard
+git clone https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026.git aquaguard && cd aquaguard
 sudo bash operating-systems/scripts/00_provisionar_tudo.sh          # provisiona tudo (≈ 5–8 min)
 sudo bash operating-systems/scripts/04_teste_falha.sh               # testes de falha
 sudo bash operating-systems/scripts/05_relatorio_auditoria.sh       # relatório consolidado

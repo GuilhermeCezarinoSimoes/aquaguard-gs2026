@@ -17,9 +17,8 @@ Evidências já prontas em `evidencias\backend\` (print do Swagger, print do pai
 Explicação técnica completa: `backend\README.md`.
 
 ## O que VOCÊ precisa fazer
-1. Publicar o projeto no GitHub (veja `00_PREPARAR_COMPUTADOR\PASSO_A_PASSO.md`, Parte 3).
-2. Abrir o link e conferir que aparece a pasta `backend` com o `README.md`.
-3. Enviar no Teams (só **uma** pessoa do grupo).
+1. O projeto **já está no GitHub**: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 (abra e veja a pasta `backend`).
+2. Enviar no Teams o texto abaixo (só **uma** pessoa do grupo).
 
 ### (Opcional, 5 min) Ver funcionando com seus olhos
 1. Dois cliques em `00_PREPARAR_COMPUTADOR\B_LIGAR_SERVIDOR_API.bat`.
@@ -28,11 +27,11 @@ Explicação técnica completa: `backend\README.md`.
 3. Para rodar os testes: abra o **cmd** ▸ digite `cd ` (com espaço), arraste a pasta `backend` para a janela, Enter ▸
    digite `dotnet test` ▸ Enter. Deve terminar com **"Aprovado! … Aprovado: 47"** (ou "Passed: 47").
 
-## O que enviar no Teams (copie e cole, trocando o link)
+## O que enviar no Teams (copie e cole — já está com o link certo)
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard
 Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
-Repositório: https://github.com/SEU-USUARIO/aquaguard-gs2026
+Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 Backend (SOA): pasta /backend – README em /backend/README.md
 Documentação dos endpoints: Swagger (/swagger) e backend/docs/openapi.json
 Evidências: /evidencias/backend

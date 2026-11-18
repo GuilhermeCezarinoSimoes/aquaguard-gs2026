@@ -74,7 +74,7 @@ Global Solution 2026.2 – CitizenTech – AquaGuard – Physical Computing
 Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
 Projeto Wokwi: https://wokwi.com/projects/XXXXXXXX
 Vídeo (4 min): https://youtu.be/XXXXXXXX
-Código e documentação: https://github.com/SEU-USUARIO/aquaguard-gs2026 (pasta /iot)
+Código e documentação: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 (pasta /iot)
 ```
 
 ## Deu erro?

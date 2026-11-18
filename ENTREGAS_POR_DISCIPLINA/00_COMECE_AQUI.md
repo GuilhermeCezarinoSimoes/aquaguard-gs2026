@@ -56,7 +56,7 @@ VS Code (https://code.visualstudio.com — botão direito no arquivo ▸ "Open P
 | # | Tarefa | Pasta | Tempo | Precisa de |
 |---|---|---|---|---|
 | 1 | Instalar os programas | `00_PREPARAR_COMPUTADOR` | 30 min | internet |
-| 2 | **Publicar o projeto no GitHub** (gera o link que 4 matérias pedem) | `00_PREPARAR_COMPUTADOR` | 15 min | conta GitHub |
+| 2 | ✅ **Já feito:** projeto publicado em https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 | — | 0 | — |
 | 3 | Conversar com um morador (o edital exige) | `08_Testing...` ▸ parte do pitch | 20 min | celular |
 | 4 | Wokwi: montar o circuito e salvar o link | `07_Physical_Computing...` | 20 min | conta Wokwi (grátis) |
 | 5 | Gravar vídeo do IoT (4 min) | `07_Physical_Computing...` | 30 min | gravador de tela |
@@ -69,7 +69,7 @@ VS Code (https://code.visualstudio.com — botão direito no arquivo ▸ "Open P
 | 12 | Enviar tudo no Teams | cada pasta | 30 min | conta FIAP |
 
 **Dica:** se o tempo apertar, entregue primeiro as matérias que só pedem link do GitHub
-(**SOA**, **C#**) — elas já estão 100% prontas depois do passo 2.
+(**SOA**, **C#**) — elas já estão 100% prontas: é só enviar o texto da pasta delas.
 
 ---
 
@@ -86,7 +86,7 @@ Abra o **Teams** ▸ equipe da turma ▸ aba **Tarefas** (ou "Atividades") ▸ a
 cole o link/anexe o arquivo ▸ **Entregar**. **Só UMA pessoa do grupo envia cada matéria.**
 
 ## 6. Lista final (marque com X)
-- [ ] Projeto publicado no GitHub — link: ______________________
+- [x] Projeto publicado no GitHub — https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 - [ ] 01 SOA — enviado
 - [ ] 02 C# — enviado
 - [ ] 03 Mobile — vídeo: ______________________ — enviado

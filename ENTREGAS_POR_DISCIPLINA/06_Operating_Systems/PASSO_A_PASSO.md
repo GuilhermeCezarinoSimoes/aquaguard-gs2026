@@ -20,7 +20,7 @@ Entrega no Teams: **link do GitHub** + **vídeo de até 7 minutos** mostrando a 
 
 ## Do que você precisa
 - PC com **8 GB de RAM** ou mais e **40 GB livres** no disco.
-- O projeto **publicado no GitHub** (veja `00_PREPARAR_COMPUTADOR`), porque a VM baixa o projeto de lá.
+- Internet: a VM baixa o projeto do GitHub (já publicado e público).
 - ~2 horas (a maior parte é esperar instalar).
 
 ## Entendendo em 1 minuto
@@ -92,10 +92,10 @@ Clique em **Iniciar (Start)**. Abre a janela da VM. Use as **setas** e **Enter**
 5. Aparece `aluno@aquaguard:~$`. Agora você está **dentro do Linux**. Para colar comandos: **botão direito do mouse** ou Ctrl+V.
 
 ### B2. Baixar o projeto e rodar tudo
-Cole **uma linha por vez** e aperte Enter (troque `SEU-USUARIO` pelo do GitHub). Quando pedir senha (`sudo`), digite a do Ubuntu.
+Cole **uma linha por vez** e aperte Enter (o link já está certo). Quando pedir senha (`sudo`), digite a do Ubuntu.
 ```
 sudo apt-get update && sudo apt-get install -y git
-git clone https://github.com/SEU-USUARIO/aquaguard-gs2026.git aquaguard
+git clone https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026.git aquaguard
 cd aquaguard
 sudo bash operating-systems/scripts/00_provisionar_tudo.sh
 ```
@@ -154,7 +154,7 @@ Publique no YouTube (Não listado).
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard – Operating Systems
 Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
-Repositório: https://github.com/SEU-USUARIO/aquaguard-gs2026 (pasta /operating-systems: scripts, configurações, README; evidências em /evidencias/operating-systems)
+Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 (pasta /operating-systems: scripts, configurações, README; evidências em /evidencias/operating-systems)
 Vídeo (7 min): https://youtu.be/XXXXXXXX
 ```
 

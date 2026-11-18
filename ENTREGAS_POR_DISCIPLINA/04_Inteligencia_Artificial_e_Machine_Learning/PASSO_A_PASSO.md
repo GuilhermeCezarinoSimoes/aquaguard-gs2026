@@ -57,7 +57,7 @@ relatório `RELATORIO_ML.md`, dados em `ml\dados\`, gráficos em `ml\figuras\`.
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard
 Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
-Repositório: https://github.com/SEU-USUARIO/aquaguard-gs2026  (pasta /ml: notebook executado, RELATORIO_ML.md, dados/README.md, requirements.txt)
+Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026  (pasta /ml: notebook executado, RELATORIO_ML.md, dados/README.md, requirements.txt)
 Vídeo (5 min, não listado): https://youtu.be/XXXXXXXX
 ```
 

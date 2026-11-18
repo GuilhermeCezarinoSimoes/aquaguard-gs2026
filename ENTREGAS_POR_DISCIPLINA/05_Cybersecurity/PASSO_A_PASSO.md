@@ -64,7 +64,7 @@ Global Solution 2026.2 – CitizenTech – AquaGuard – Cybersecurity
 Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
 ZIP: código do módulo (regras PII, Taint Analysis, tradução por IA, dashboard) + evidências da auditoria
 Vídeo do dashboard: https://youtu.be/XXXXXXXX
-Repositório: https://github.com/SEU-USUARIO/aquaguard-gs2026 (pasta /cybersecurity)
+Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 (pasta /cybersecurity)
 Resultado: Indicador de Risco Cidadão 92 (Crítico) -> 18 (Baixo); 28 vazamentos bloqueados; 37 testes aprovados.
 ```
 

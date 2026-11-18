@@ -1,4 +1,4 @@
-# 00 — Preparar o computador e publicar no GitHub
+# 00 — Preparar o computador (e o link do GitHub)
 
 ## Parte 1 — Instalar os programas (uma vez só, ~30 min)
 Baixe e instale **nesta ordem**, sempre clicando em "Avançar/Next" com as opções padrão:
@@ -36,31 +36,29 @@ Tem que aparecer `[OK]` nas três linhas. Se aparecer `[FALTA]`, instale o que f
 2. Dois cliques em `C_SIMULAR_ENCHENTE.bat` → no painel, o Jardim Pantanal fica **Crítico** (atualiza a cada 10 s).
 Funcionou? Ótimo, o computador está pronto.
 
-## Parte 3 — Publicar o projeto no GitHub (gera o "link do GitHub")
-> Se o Guilherme já tiver publicado e mandado o link, **pule esta parte**.
-> O projeto já tem histórico de versões salvo (pasta oculta `.git`) — o GitHub Desktop só precisa enviar.
+## Parte 3 — O projeto no GitHub (JÁ PUBLICADO ✅)
+**Link do GitHub (é este que vai no Teams):**
+### https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 
-1. Crie uma conta grátis em https://github.com (se não tiver) e entre no **GitHub Desktop**.
-2. No GitHub Desktop: **File ▸ Add local repository…** ▸ **Choose…** ▸ selecione a pasta **`GS`** (a pasta que contém
-   `ENTREGAS_POR_DISCIPLINA`) ▸ **Add repository**.
-3. Clique no botão azul **"Publish repository"** (no topo).
-   - Name: `aquaguard-gs2026`
-   - **DESMARQUE** ☐ "Keep this code private" (o professor precisa conseguir abrir o link).
-   - Clique **Publish repository** e espere terminar.
-4. Clique em **Repository ▸ View on GitHub**. O navegador abre o projeto. **Copie o endereço** da barra do navegador
-   (algo como `https://github.com/SEU-USUARIO/aquaguard-gs2026`). **Esse é o link do GitHub.**
-5. Teste o link numa **janela anônima** do navegador (Ctrl+Shift+N). Tem que abrir sem pedir login.
+Os textos prontos de todas as pastas já usam esse link. O repositório é **público** (o professor abre sem login).
 
-### Depois de publicar: colocar o link nos documentos
-Abra estes arquivos no Bloco de Notas, procure (Ctrl+F) por **`<inserir`** e troque pelo link certo:
-- `README.md` (pasta principal) — link do repositório
-- `mobile\README.md` — link do repositório e do vídeo do app
+### Colocar os links dos vídeos/Wokwi/Azure no GitHub (no fim, quando tiver todos)
+Abra estes arquivos no Bloco de Notas, procure (Ctrl+F) por **`<inserir`** ou **`PREENCHER`** e troque pelo link certo:
+- `mobile\README.md` — link do vídeo do app
 - `ml\README.md` — link do vídeo de ML
 - `iot\integrantes.txt` — link do Wokwi e do vídeo de IoT
 - `testing\FEATURES_E_TEST_CASES.md` — link do projeto Azure
 
-Depois, no GitHub Desktop: escreva um resumo como "Adiciona links" no campo **Summary** (canto inferior esquerdo) ▸
-**Commit to main** ▸ **Push origin** (botão no topo). Pronto, o GitHub foi atualizado.
+Para enviar as alterações ao GitHub, escolha **um** dos jeitos:
+- **Jeito fácil:** mande os links para o **Guilherme** pelo WhatsApp e ele atualiza.
+- **Você mesmo:** o Guilherme precisa te dar permissão primeiro: no site do repositório ▸ **Settings ▸ Collaborators ▸
+  Add people** ▸ seu usuário do GitHub (você aceita o convite que chega por e-mail). Depois, no **GitHub Desktop**:
+  **File ▸ Add local repository** ▸ escolha a pasta **`GS`** (ela já vem ligada ao repositório do Guilherme) ▸
+  escreva "Adiciona links" em **Summary** ▸ **Commit to main** ▸ **Push origin**.
+  ⚠️ **Não** clique em "Publish repository" se aparecer: isso criaria uma cópia na sua conta.
+
+> **Se o link pedir login ou não abrir:** avise o Guilherme — o repositório pode ter sido deixado privado sem querer
+> (Settings ▸ General ▸ Danger Zone ▸ Change visibility ▸ Public).
 
 ## Deu erro?
 | Problema | Solução |
