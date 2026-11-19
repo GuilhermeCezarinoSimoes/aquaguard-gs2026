@@ -62,34 +62,32 @@ POO, Web API, EF Core + LINQ, Async/Await, qualidade — mapa em `backend/README
 | Dashboard Risco Cidadão | 2,0 | Evidenciada | `03_print_dashboard_risco_cidadao.jpg` |
 | ZIP + vídeo | — | **Bloqueada (gravação/envio)** | comando do ZIP no README |
 
-## Physical Computing — Implementada · Testada no Wokwi
+## Physical Computing — Implementada · Testada · Salva no Wokwi
 | Requisito | Status |
 |---|---|
-| Circuito ESP32 (`diagram.json`, `sketch.ino`) | Compilou e executou no Wokwi (evidência `evidencias/iot/01_wokwi_compilado_executando.jpg`); falta salvar na conta da equipe |
+| Circuito ESP32 (`diagram.json`, `sketch.ino`) | Salvo em https://wokwi.com/projects/481041117417661441 (evidências `evidencias/iot/`) |
 | Integração com a solução | Mesmas regras e mesmo payload da API (comprovado com simulador de payload) |
-| `integrantes.txt` | OK (preencher links) |
-| Link Wokwi + vídeo ≤ 4 min | **Bloqueada (conta Wokwi/gravação)** |
+| `integrantes.txt` | OK com link do Wokwi (falta link do vídeo) |
+| Vídeo ≤ 4 min | **Pendente (gravação)** |
 
-## Operating Systems — Implementada (validação na VM pendente)
+## Operating Systems — Testada em VM real (18/11/2026)
 | Requisito | Pts | Status |
 |---|---|---|
-| Provisionamento de infra (rede/DNS/IP) | 2 | Implementada · sintaxe validada |
-| Provisionamento da aplicação | 2 | Implementada · app hospedada testada no Windows |
-| Monitoramento com alertas CPU/disco/memória | 2 | Implementada |
-| Monitor como serviço tolerante a falhas | 1 | Implementada |
-| Logs de auditoria | 1 | Implementada |
-| Funcionamento completo + teste de falha + vídeo ≤ 7 min | 2 | **Bloqueada (VM Linux)** |
+| Provisionamento de infra (rede/DNS/IP) | 2 | Testada na VM (hostname aquaguard-srv01, DNS, UFW, auditd) |
+| Provisionamento da aplicação | 2 | Testada na VM (.NET 8, publish, systemd, nginx, health 200) |
+| Monitoramento com alertas CPU/disco/memória | 2 | Testada (alertas CPU 92 % e disco 90 %) |
+| Monitor como serviço tolerante a falhas | 1 | Testada (SIGKILL → reiniciado) |
+| Logs de auditoria | 1 | Evidenciada (`evidencias/operating-systems/01_relatorio_auditoria_vm.txt`) |
+| Funcionamento completo + teste de falha | 2 | **5/5 aprovados** · falta vídeo ≤ 7 min (gravar no PC do Fabrini) |
 
-## Testing — Documentada
+## Testing — Cadastrada no Azure
 | Requisito | Status |
 |---|---|
 | 7 Features com descrição e critérios de aceite | Implementada (`testing/FEATURES_E_TEST_CASES.md`, CSV) |
 | 25 Test Cases (13 positivos, 12 negativos) | Implementada (CSV com passos) |
-| Cadastro no Azure + professor Admin + PDF com prints | **Bloqueada (conta Azure)** |
-| Pitch 4 min | **Bloqueada (gravação)** |
+| Cadastro no Azure + PDF com prints | OK — https://dev.azure.com/Fabriniaraujo2306/AquaGuard |
+| Professor como Admin | **Pendente — fazer ANTES de entregar** (conta do Fabrini) |
+| Pitch 4 min | **Pendente (gravação)** — persona Dona Cida em `docs/persona_dona_cida.md` |
 
-## Publicar no GitHub
-O repositório local já está versionado. Crie o repositório e envie (ou peça ao Claude para executar estes comandos):
-```bash
-gh repo create aquaguard-gs2026 --public --source . --push
-```
+## GitHub
+Publicado: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 — falta incluir os links dos vídeos.

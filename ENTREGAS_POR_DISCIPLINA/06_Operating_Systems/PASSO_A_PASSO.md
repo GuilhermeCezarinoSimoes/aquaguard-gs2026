@@ -14,9 +14,9 @@ Entrega no Teams: **link do GitHub** + **vídeo de até 7 minutos** mostrando a 
 | Logs de auditoria | 1 | `scripts\lib\comum.sh`, `05_relatorio_auditoria.sh` | ✅ escrito |
 | Funcionamento completo | 2 | `00_provisionar_tudo.sh` + `04_teste_falha.sh` | ⚠️ **precisa rodar na VM e gravar** |
 
-> ⚠️ **Importante:** os scripts foram escritos e revisados, mas **nunca rodaram num Linux de verdade** (o PC onde foram
-> feitos não tem Linux). Esta é a matéria com **mais risco**. Comece cedo. Se algo der erro, a seção "Deu erro?" no final
-> ajuda; anote a mensagem exata.
+> ✅ **Já testado numa máquina virtual real em 18/11/2026: provisionamento completo e 5 de 5 testes de falha aprovados**
+> (evidências em `evidencias\operating-systems\`). A VM pronta está no PC do Fabrini; em outro PC, é preciso criar a VM
+> do zero (Parte A, ~1 h). Falta só **gravar o vídeo**.
 
 ## Do que você precisa
 - PC com **8 GB de RAM** ou mais e **40 GB livres** no disco.

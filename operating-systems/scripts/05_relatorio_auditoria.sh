@@ -32,8 +32,10 @@ SAIDA="${1:-${AQG_LOG_DIR}/relatorio_auditoria_$(date +%Y%m%d_%H%M%S).txt}"
   journalctl -u aquaguard-api -u aquaguard-monitor --since "-2 h" --no-pager -o short-iso 2>/dev/null | grep -Ei "start|stop|kill|fail|restart" | tail -30
   echo
   echo "--- 6. auditd: alterações em arquivos críticos (chaves aquaguard_*)"
-  ausearch -k aquaguard_config -k aquaguard_servico -k aquaguard_binarios -k aquaguard_scripts -ts today -i 2>/dev/null \
-    | grep -E "^type=SYSCALL|name=" | tail -30 || echo "(sem eventos)"
+  # --input-logs + </dev/null: sem isso o ausearch pode ficar esperando entrada quando não está num terminal
+  # (na 1ª execução real, dentro do 00_provisionar_tudo.sh, o relatório levou 664 s por esse motivo)
+  timeout 60 ausearch --input-logs -k aquaguard_config -k aquaguard_servico -k aquaguard_binarios -k aquaguard_scripts \
+    -ts today -i </dev/null 2>/dev/null | grep -E "^type=SYSCALL|name=" | tail -30 || echo "(sem eventos)"
   echo
   echo "--- 7. Acessos HTTP (nginx) — top 10 rotas"
   awk '{print $7}' /var/log/nginx/aquaguard_access.log 2>/dev/null | sort | uniq -c | sort -rn | head -10

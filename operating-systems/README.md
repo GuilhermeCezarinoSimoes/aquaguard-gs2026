@@ -62,6 +62,12 @@ curl http://localhost/health ; curl http://localhost/api/painel | jq
 ## Status de validação
 - ✅ Sintaxe de todos os scripts validada (`bash -n`).
 - ✅ A aplicação hospedada (API + painel) foi executada e testada (47 testes automatizados; ver `../backend`).
-- ⏳ **Execução completa na VM Linux: pendente** — o computador de desenvolvimento é Windows sem WSL/Docker.
-  A equipe deve rodar os comandos acima na VM, salvar as saídas em `../evidencias/operating-systems/`
-  e gravar o vídeo (roteiro: `../docs/roteiros/roteiro_video_os.md`).
+- ✅ **Executado numa VM real em 18/11/2026** (VirtualBox, Ubuntu Server 24.04, host `aquaguard-srv01`, kernel 6.8):
+  provisionamento completo com sucesso (infra 37 s, aplicação 122 s), API e monitor ativos, nginx servindo `/` e `/swagger`,
+  UFW ativo (22 e 80 liberadas, 5080 bloqueada), regras auditd registrando execução dos scripts.
+- ✅ **Teste de falha: 5 de 5 aprovados** — API morta com SIGKILL reiniciou em 5 s; monitor reiniciou; alerta de CPU (92 %);
+  alerta de disco (90 %); alerta crítico com nginx parado.
+  Evidências: `../evidencias/operating-systems/01_relatorio_auditoria_vm.txt` e `02_teste_falha_5_aprovados.log`.
+- 🔧 Correção após o teste real: o `ausearch` do relatório ficava esperando entrada quando executado fora de um terminal
+  (o relatório levou 664 s na 1ª execução); agora usa `--input-logs`, entrada vazia e limite de 60 s.
+- ⏳ Falta gravar o vídeo (roteiro: `../docs/roteiros/roteiro_video_os.md`).

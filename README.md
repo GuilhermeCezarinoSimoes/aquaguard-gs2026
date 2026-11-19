@@ -52,9 +52,9 @@ Detalhes e o que está integrado × demonstrado separadamente: [ARQUITETURA.md](
 | Mobile Development & IoT | [`mobile/`](mobile/README.md) | `npx expo start` | Implementada e testada (web); falta vídeo |
 | IA & Machine Learning | [`ml/`](ml/README.md) | notebook executado | Implementada e testada; falta vídeo |
 | Cybersecurity | [`cybersecurity/`](cybersecurity/README.md) | `python -m aquaguard_sec` | Implementada e testada; falta vídeo/ZIP |
-| Physical Computing | [`iot/`](iot/README.md) | Wokwi | Compilada e simulada no Wokwi; falta salvar na conta (link) e vídeo |
-| Operating Systems | [`operating-systems/`](operating-systems/README.md) | `00_provisionar_tudo.sh` na VM | Implementada; falta executar na VM e vídeo |
-| Testing & QA | [`testing/`](testing/README.md) | importar CSVs no Azure | Documentada; falta cadastrar no Azure, PDF e pitch |
+| Physical Computing | [`iot/`](iot/README.md) | Wokwi | Salva no Wokwi ([link](https://wokwi.com/projects/481041117417661441)) e testada; falta vídeo |
+| Operating Systems | [`operating-systems/`](operating-systems/README.md) | `00_provisionar_tudo.sh` na VM | Executada em VM real: 5/5 testes de falha aprovados; falta vídeo |
+| Testing & QA | [`testing/`](testing/README.md) | importar CSVs no Azure | Cadastrada no [Azure DevOps](https://dev.azure.com/Fabriniaraujo2306/AquaGuard) com PDF; falta professor como Admin e pitch |
 
 Situação detalhada e pendências: [CHECKLIST_ENTREGAS.md](CHECKLIST_ENTREGAS.md) · Requisitos do edital: [REQUISITOS_GS.md](REQUISITOS_GS.md) ·
 Plano: [PLANO_EXECUCAO.md](PLANO_EXECUCAO.md) · Roteiros de vídeo: [`docs/roteiros/`](docs/roteiros) · Uso de IA: [prompts.md](prompts.md)

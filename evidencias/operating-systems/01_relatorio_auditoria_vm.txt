@@ -1,0 +1,106 @@
+=================== RELATÓRIO DE AUDITORIA AQUAGUARD ===================
+Gerado em: Wed Nov 18 12:46:59 PM -03 2026  ·  Host: aquaguard-srv01.aquaguard.local  ·  Kernel: 6.8.0-149-generic
+Uptime: up 18 minutes  ·  IP: 10.0.2.15 fd17:625c:f037:2:a00:27ff:fefb:8306 
+
+--- 1. Serviços
+● aquaguard-api.service - AquaGuard API (ASP.NET Core) - CitizenTech de alagamentos
+     Active: active (running) since Wed 2026-11-18 12:44:31 -03; 2min 28s ago
+   Main PID: 6289 (dotnet)
+● aquaguard-monitor.service - AquaGuard - monitor de infraestrutura (CPU, memoria, disco, API)
+     Active: active (running) since Wed 2026-11-18 12:44:39 -03; 2min 20s ago
+   Main PID: 6349 (bash)
+● nginx.service - A high performance web server and a reverse proxy server
+     Active: active (running) since Wed 2026-11-18 12:46:45 -03; 14s ago
+   Main PID: 6841 (nginx)
+Reinícios automáticos da API: 1
+
+--- 2. Execuções de scripts (trilha de auditoria)
+2026-11-18T15:29:46+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=00_provisionar_tudo.sh|pid=1374|evento=INICIO|args=
+2026-11-18T15:29:46+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=01_provisionar_infra.sh|pid=1403|evento=INICIO|args=/etc/aquaguard/aquaguard.env
+2026-11-18T15:30:02+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=00_provisionar_tudo.sh|pid=2437|evento=INICIO|args=
+2026-11-18T15:30:02+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=01_provisionar_infra.sh|pid=2461|evento=INICIO|args=/etc/aquaguard/aquaguard.env
+2026-11-18T15:30:02+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=01_provisionar_infra.sh|pid=2461|evento=FIM|status=sucesso duracao=0s
+2026-11-18T15:30:02+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=00_provisionar_tudo.sh|pid=2437|evento=FIM|status=sucesso duracao=0s
+2026-11-18T15:30:06+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=01_provisionar_infra.sh|pid=1403|evento=FIM|status=sucesso duracao=20s
+2026-11-18T15:30:06+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=00_provisionar_tudo.sh|pid=1374|evento=FIM|status=sucesso duracao=20s
+2026-11-18T15:30:16+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=00_provisionar_tudo.sh|pid=2623|evento=INICIO|args=
+2026-11-18T15:30:16+0000|host=aquaguard|usuario=root|sudo_user=aluno|script=01_provisionar_infra.sh|pid=2647|evento=INICIO|args=/etc/aquaguard/aquaguard.env
+2026-11-18T12:30:53-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=01_provisionar_infra.sh|pid=2647|evento=FIM|status=sucesso duracao=37s
+2026-11-18T12:30:53-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=02_provisionar_app.sh|pid=3525|evento=INICIO|args=/etc/aquaguard/aquaguard.env
+2026-11-18T12:32:55-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=02_provisionar_app.sh|pid=3525|evento=FIM|status=sucesso duracao=122s
+2026-11-18T12:32:56-0300|host=aquaguard-srv01|usuario=root|sudo_user=|script=03_monitor.sh|pid=4952|evento=INICIO|args=
+2026-11-18T12:32:59-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=05_relatorio_auditoria.sh|pid=5018|evento=INICIO|args=
+2026-11-18T12:44:03-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=05_relatorio_auditoria.sh|pid=5018|evento=FIM|status=sucesso duracao=664s
+2026-11-18T12:44:03-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=00_provisionar_tudo.sh|pid=2623|evento=FIM|status=sucesso duracao=827s
+2026-11-18T12:44:20-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=05_relatorio_auditoria.sh|pid=6095|evento=INICIO|args=/tmp/rel.txt
+2026-11-18T12:44:20-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=05_relatorio_auditoria.sh|pid=6095|evento=FIM|status=sucesso duracao=0s
+2026-11-18T12:44:28-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=04_teste_falha.sh|pid=6243|evento=INICIO|args=
+2026-11-18T12:44:39-0300|host=aquaguard-srv01|usuario=root|sudo_user=|script=03_monitor.sh|pid=6349|evento=INICIO|args=
+2026-11-18T12:44:40-0300|host=aquaguard-srv01|usuario=root|sudo_user=|script=03_monitor.sh|pid=6349|evento=ALERTA|CPU 92% (limite 80%)
+2026-11-18T12:46:14-0300|host=aquaguard-srv01|usuario=root|sudo_user=|script=03_monitor.sh|pid=6349|evento=ALERTA|DISCO 90% (limite 85%)
+2026-11-18T12:46:45-0300|host=aquaguard-srv01|usuario=root|sudo_user=|script=03_monitor.sh|pid=6349|evento=ALERTA|NGINX nginx parado
+2026-11-18T12:46:45-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=04_teste_falha.sh|pid=6243|evento=FIM|status=sucesso duracao=137s
+2026-11-18T12:46:59-0300|host=aquaguard-srv01|usuario=root|sudo_user=aluno|script=05_relatorio_auditoria.sh|pid=6930|evento=INICIO|args=/tmp/relatorio_auditoria.txt
+
+--- 3. Alertas de infraestrutura
+2026-11-18T12:44:40-0300 [ALERTA] CPU: 92% (limite 80%)
+2026-11-18T12:46:14-0300 [OK] CPU: normalizado (0%)
+2026-11-18T12:46:14-0300 [ALERTA] DISCO: 90% (limite 85%)
+2026-11-18T12:46:45-0300 [OK] DISCO: normalizado (16%)
+2026-11-18T12:46:45-0300 [CRITICO] NGINX: nginx parado
+
+--- 4. Últimas métricas
+{"ts":"2026-11-18T12:42:19-0300","host":"aquaguard-srv01","cpu":0,"mem":21,"disco":16,"load":"0.00 0.28 0.40","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"dotnet:7.1"}
+{"ts":"2026-11-18T12:42:50-0300","host":"aquaguard-srv01","cpu":0,"mem":16,"disco":16,"load":"0.00 0.26 0.39","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"dotnet:1.4"}
+{"ts":"2026-11-18T12:43:21-0300","host":"aquaguard-srv01","cpu":0,"mem":16,"disco":16,"load":"0.00 0.23 0.37","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"dotnet:1.4"}
+{"ts":"2026-11-18T12:43:52-0300","host":"aquaguard-srv01","cpu":0,"mem":16,"disco":16,"load":"0.00 0.20 0.36","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"dotnet:1.3"}
+{"ts":"2026-11-18T12:44:23-0300","host":"aquaguard-srv01","cpu":0,"mem":15,"disco":16,"load":"0.23 0.23 0.36","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"dotnet:1.2"}
+{"ts":"2026-11-18T12:44:40-0300","host":"aquaguard-srv01","cpu":92,"mem":15,"disco":16,"load":"0.18 0.22 0.35","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"stress-ng-cpu:93.6"}
+{"ts":"2026-11-18T12:45:11-0300","host":"aquaguard-srv01","cpu":100,"mem":15,"disco":16,"load":"0.99 0.42 0.42","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"stress-ng-cpu:99.1"}
+{"ts":"2026-11-18T12:45:42-0300","host":"aquaguard-srv01","cpu":100,"mem":15,"disco":16,"load":"1.39 0.57 0.47","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"stress-ng-cpu:99.3"}
+{"ts":"2026-11-18T12:46:14-0300","host":"aquaguard-srv01","cpu":0,"mem":15,"disco":90,"load":"1.12 0.59 0.48","api_http":"200","svc_api":"ativo","svc_nginx":"ativo","top_proc":"dotnet:2.8"}
+{"ts":"2026-11-18T12:46:45-0300","host":"aquaguard-srv01","cpu":0,"mem":15,"disco":16,"load":"0.86 0.58 0.48","api_http":"200","svc_api":"ativo","svc_nginx":"inativo","top_proc":"dotnet:2.2"}
+
+--- 5. Eventos systemd (últimas 2h)
+2026-11-18T12:32:51-03:00 aquaguard-srv01 systemd[1]: Started aquaguard-api.service - AquaGuard API (ASP.NET Core) - CitizenTech de alagamentos.
+2026-11-18T12:32:54-03:00 aquaguard-srv01 aquaguard-api[4626]:       Application started. Press Ctrl+C to shut down.
+2026-11-18T12:32:56-03:00 aquaguard-srv01 systemd[1]: Started aquaguard-monitor.service - AquaGuard - monitor de infraestrutura (CPU, memoria, disco, API).
+2026-11-18T12:44:28-03:00 aquaguard-srv01 systemd[1]: aquaguard-api.service: Main process exited, code=killed, status=9/KILL
+2026-11-18T12:44:28-03:00 aquaguard-srv01 systemd[1]: aquaguard-api.service: Failed with result 'signal'.
+2026-11-18T12:44:31-03:00 aquaguard-srv01 systemd[1]: aquaguard-api.service: Scheduled restart job, restart counter is at 1.
+2026-11-18T12:44:31-03:00 aquaguard-srv01 systemd[1]: Started aquaguard-api.service - AquaGuard API (ASP.NET Core) - CitizenTech de alagamentos.
+2026-11-18T12:44:33-03:00 aquaguard-srv01 aquaguard-api[6289]:       Application started. Press Ctrl+C to shut down.
+2026-11-18T12:44:34-03:00 aquaguard-srv01 systemd[1]: aquaguard-monitor.service: Main process exited, code=killed, status=9/KILL
+2026-11-18T12:44:34-03:00 aquaguard-srv01 systemd[1]: aquaguard-monitor.service: Failed with result 'signal'.
+2026-11-18T12:44:39-03:00 aquaguard-srv01 systemd[1]: aquaguard-monitor.service: Scheduled restart job, restart counter is at 1.
+2026-11-18T12:44:39-03:00 aquaguard-srv01 systemd[1]: Started aquaguard-monitor.service - AquaGuard - monitor de infraestrutura (CPU, memoria, disco, API).
+
+--- 6. auditd: alterações em arquivos críticos (chaves aquaguard_*)
+type=PATH msg=audit(11/18/2026 12:30:51.769:574) : item=0 name=/opt/aquaguard-infra/scripts inode=787045 dev=08:02 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=SYSCALL msg=audit(11/18/2026 12:30:51.769:574) : arch=x86_64 syscall=sendto success=yes exit=1104 a0=0x3 a1=0x7fff3d45dba0 a2=0x450 a3=0x0 items=1 ppid=3308 pid=3322 auid=aluno uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=5 comm=auditctl exe=/usr/sbin/auditctl subj=unconfined key=(null) 
+type=PATH msg=audit(11/18/2026 12:32:56.371:4666) : item=2 name=/lib64/ld-linux-x86-64.so.2 inode=1085469 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/18/2026 12:32:56.371:4666) : item=1 name=/usr/bin/env inode=1050722 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/18/2026 12:32:56.371:4666) : item=0 name=/opt/aquaguard-infra/scripts/03_monitor.sh inode=787049 dev=08:02 mode=file,750 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=SYSCALL msg=audit(11/18/2026 12:32:56.371:4666) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x57a97aa1c0a0 a1=0x57a97aa1c080 a2=0x57a97aa1be40 a3=0x57a97aa1c990 items=3 ppid=1 pid=4952 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=03_monitor.sh exe=/usr/bin/env subj=unconfined key=aquaguard_scripts 
+type=PATH msg=audit(11/18/2026 12:44:39.353:4761) : item=2 name=/lib64/ld-linux-x86-64.so.2 inode=1085469 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/18/2026 12:44:39.353:4761) : item=1 name=/usr/bin/env inode=1050722 dev=08:02 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(11/18/2026 12:44:39.353:4761) : item=0 name=/opt/aquaguard-infra/scripts/03_monitor.sh inode=787049 dev=08:02 mode=file,750 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=SYSCALL msg=audit(11/18/2026 12:44:39.353:4761) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x59c44b9bf0a0 a1=0x59c44b9bf080 a2=0x59c44b9bee40 a3=0x59c44b9bf990 items=3 ppid=1 pid=6349 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=03_monitor.sh exe=/usr/bin/env subj=unconfined key=aquaguard_scripts 
+
+--- 7. Acessos HTTP (nginx) — top 10 rotas
+      9 /health
+      1 /swagger/index.html
+      1 /
+
+--- 8. Firewall
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] OpenSSH                    ALLOW IN    Anywhere                  
+[ 2] 80/tcp                     ALLOW IN    Anywhere                   # AquaGuard painel/API via nginx
+[ 3] 5080/tcp                   DENY IN     Anywhere                   # Kestrel só via proxy reverso
+[ 4] OpenSSH (v6)               ALLOW IN    Anywhere (v6)             
+[ 5] 80/tcp (v6)                ALLOW IN    Anywhere (v6)              # AquaGuard painel/API via nginx
+[ 6] 5080/tcp (v6)              DENY IN     Anywhere (v6)              # Kestrel só via proxy reverso
+

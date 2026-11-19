@@ -224,7 +224,7 @@ CASOS = [
 def gerar_markdown() -> str:
     linhas = ["# AquaGuard · Testing, Compliance & Quality Assurance", "",
               "**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares  ",
-              "**Projeto Azure DevOps:** _<inserir link do projeto após criação>_  ",
+              "**Projeto Azure DevOps:** [https://dev.azure.com/Fabriniaraujo2306/AquaGuard](https://dev.azure.com/Fabriniaraujo2306/AquaGuard)  ",
               f"**Totais:** {len(FEATURES)} Features · {len(CASOS)} Test Cases "
               f"({sum(c[2] == 'Positivo' for c in CASOS)} positivos, {sum(c[2] == 'Negativo' for c in CASOS)} negativos) · caixa-preta", "",
               "## Features", ""]

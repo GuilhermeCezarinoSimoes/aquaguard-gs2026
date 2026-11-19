@@ -41,7 +41,9 @@ causa provável e a solução em linguagem simples.
 - **Requisitos oficiais extraídos do edital (PDF de 40 páginas):** `REQUISITOS_GS.md` · **Status/pendências:** `CHECKLIST_ENTREGAS.md`
 - **Explicação simples do projeto:** `ENTREGAS_POR_DISCIPLINA\EXPLICACAO_SIMPLES.md`
 - **Roteiros de vídeo:** `docs\roteiros\` (também dentro de cada PASSO_A_PASSO) · **Conversa com morador (modelo):** `docs\pesquisa_campo.md`
-- **Ainda NÃO existem (precisamos criar):** link do projeto Wokwi, links dos vídeos no YouTube, link do projeto Azure DevOps.
+- **Wokwi (salvo e testado):** https://wokwi.com/projects/481041117417661441
+- **Azure DevOps:** https://dev.azure.com/Fabriniaraujo2306/AquaGuard (conta do Fabrini; falta incluir o professor como Admin)
+- **Ainda NÃO existem:** links dos vídeos no YouTube.
 
 ## 3. Estrutura da pasta `GS` (não mova nem renomeie as pastas de código)
 ```
@@ -74,7 +76,7 @@ GS\
 | **IA & Machine Learning** | ✅ Pronta · ❌ falta vídeo (5 min) | Dados reais INMET estação A701 (2012–2025, 122.736 registros horários). Random Forest, 18 combinações de 3 hiperparâmetros, TimeSeriesSplit no treino. Teste 2023–2025: ROC-AUC 0,79; avisou 51 de 74 chuvas fortes (69 %). Notebook executado `ml\AquaGuard_ML.ipynb` (+ `.html`), `ml\RELATORIO_ML.md` |
 | **Cybersecurity** | ✅ Pronta · ZIP já gerado · ❌ falta vídeo | Motor de PII (11 regras), Taint Analysis dinâmico e estático, tradução por IA (modo offline sem chave; usa Claude se houver `ANTHROPIC_API_KEY`), Indicador de Risco Cidadão **92 → 18**. **37 testes passando**. ZIP: `ENTREGAS_POR_DISCIPLINA\05_Cybersecurity\entrega_cybersecurity_AquaGuard.zip`. Print: `evidencias\cybersecurity\03_print_dashboard_risco_cidadao.jpg` |
 | **Physical Computing (Wokwi)** | ✅ Circuito testado · ❌ falta salvar link + vídeo (4 min) | ESP32 + HC-SR04 + potenciômetro (chuva) + LCD I2C + 3 LEDs + buzzer + botão. **Compilou e rodou no Wokwi** (evidência `evidencias\iot\01_wokwi_compilado_executando.jpg`), mas o projeto não foi salvo (precisa conta). Biblioteca: LiquidCrystal I2C |
-| **Operating Systems** | ⚠️ Scripts prontos · ❌ **nunca rodaram em Linux** · ❌ falta vídeo (7 min) | `operating-systems\scripts\00..05`: infra (hostname, DNS, IP, UFW, auditd), app (.NET, publish, systemd, nginx), monitor CPU/mem/disco com alertas, serviço tolerante a falhas, teste de falha (5 cenários), relatório de auditoria. Validados só com `bash -n`. **É a matéria de maior risco.** |
+| **Operating Systems** | ✅ **Testado em VM real (18/11): 5/5 testes de falha** · ❌ falta vídeo (7 min, VM no PC do Fabrini) | `operating-systems\scripts\00..05`: infra (hostname, DNS, IP, UFW, auditd), app (.NET, publish, systemd, nginx), monitor CPU/mem/disco com alertas, serviço tolerante a falhas, teste de falha (5 cenários), relatório de auditoria. Evidências em `evidencias\operating-systems\`. |
 | **Testing, Compliance & QA** | ✅ Conteúdo pronto · ❌ falta Azure + PDF + PITCH | 7 Features e 25 Test Cases (13 positivos, 12 negativos) em `ENTREGAS_POR_DISCIPLINA\08_Testing_Compliance_e_QA\` com CSVs para importar no Azure Boards. O **pitch de 4 min** é enviado nesta matéria |
 
 **Atalhos de dois cliques (Windows)** em `ENTREGAS_POR_DISCIPLINA\00_PREPARAR_COMPUTADOR\` — todos testados:
