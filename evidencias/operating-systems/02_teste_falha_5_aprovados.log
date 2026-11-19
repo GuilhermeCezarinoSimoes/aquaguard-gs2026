@@ -1,0 +1,12 @@
+2026-11-18 12:44:34 | 1-API SIGKILL | APROVADO | reiniciada em 5s (PID 4626 → 6289; NRestarts=1)
+2026-11-18 12:44:39 | 2-Monitor SIGKILL | APROVADO | monitor reiniciado (PID 4952 → 6349)
+2026-11-18 12:44:41 | 3-Pico de CPU | APROVADO | alerta de CPU gerado: 2026-11-18T12:44:40-0300 [ALERTA] CPU: 92% (limite 80%)
+2026-11-18 12:46:14 | 4-Disco cheio | APROVADO | alerta de disco gerado com 90% de uso
+2026-11-18 12:46:45 | 5-nginx parado | APROVADO | alerta crítico gerado
+Nov 18 12:44:28 aquaguard-srv01 systemd[1]: aquaguard-api.service: Main process exited, code=killed, status=9/KILL
+Nov 18 12:44:31 aquaguard-srv01 systemd[1]: aquaguard-api.service: Scheduled restart job, restart counter is at 1.
+Nov 18 12:44:31 aquaguard-srv01 systemd[1]: Started aquaguard-api.service - AquaGuard API (ASP.NET Core) - CitizenTech de alagamentos.
+Nov 18 12:44:33 aquaguard-srv01 aquaguard-api[6289]:       Application started. Press Ctrl+C to shut down.
+Nov 18 12:44:34 aquaguard-srv01 systemd[1]: aquaguard-monitor.service: Main process exited, code=killed, status=9/KILL
+Nov 18 12:44:39 aquaguard-srv01 systemd[1]: aquaguard-monitor.service: Scheduled restart job, restart counter is at 1.
+Nov 18 12:44:39 aquaguard-srv01 systemd[1]: Started aquaguard-monitor.service - AquaGuard - monitor de infraestrutura (CPU, memoria, disco, API).

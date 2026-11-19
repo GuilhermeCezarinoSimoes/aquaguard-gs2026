@@ -34,3 +34,4 @@ cybersecurity/saida/
 # Pacote para enviar ao João (gerado)
 PARA_ENVIAR_AO_JOAO/
 
+!evidencias/**/*.log
