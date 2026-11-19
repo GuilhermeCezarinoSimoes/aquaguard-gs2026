@@ -1,6 +1,6 @@
 # AquaGuard · Physical Computing: IoT & IoB (ESP32 + Wokwi)
 
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares (ver [`integrantes.txt`](integrantes.txt))
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690) (ver [`integrantes.txt`](integrantes.txt))
 
 ## Papel do circuito na CitizenTech
 O AquaGuard avisa moradores de áreas que alagam. O ESP32 é a **estação de campo** instalada sobre um córrego, galeria ou

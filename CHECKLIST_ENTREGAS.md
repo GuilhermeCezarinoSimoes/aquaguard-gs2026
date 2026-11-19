@@ -1,20 +1,22 @@
-# Checklist de Entregas — AquaGuard (atualizado em 17/11/2026)
+# Checklist de Entregas — AquaGuard (atualizado em 19/11/2026)
+
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
 
 Legenda: **Pendente** · **Em desenvolvimento** · **Implementada** · **Testada** · **Evidenciada** · **Bloqueada**
 "Bloqueada" = depende de ação humana (conta, login, gravação, VM) — o comando/passo exato está indicado.
 
-## Ações que só a equipe pode fazer (em ordem de prioridade)
-| # | Ação | Onde está o passo a passo | Tempo estimado |
+## Ações humanas
+| # | Ação | Responsável | Situação |
 |---|---|---|---|
-| 1 | Criar repositório no GitHub e enviar o código (`git push`) | seção "Publicar" abaixo | 5 min |
-| 2 | Registrar a conversa com um morador real (exigência do edital) | `docs/pesquisa_campo.md` | 30 min |
-| 3 | Montar o circuito no Wokwi, salvar e copiar o link | `iot/README.md` | 20 min |
-| 4 | Criar projeto no Azure DevOps, importar CSVs, adicionar professor Admin, prints → PDF | `testing/README.md` | 60 min |
-| 5 | Criar VM Ubuntu e rodar `00_provisionar_tudo.sh` + `04_teste_falha.sh`, salvar saídas | `operating-systems/README.md` | 60 min |
-| 6 | Gravar 6 vídeos e publicar no YouTube (não listado) | `docs/roteiros/` | 2–3 h |
-| 7 | (Opcional) definir `ANTHROPIC_API_KEY` e rodar a auditoria para mostrar a IA real no vídeo | `cybersecurity/README.md` | 5 min |
-| 8 | Preencher links (GitHub, YouTube, Wokwi, Azure) nos READMEs e em `iot/integrantes.txt` | busque por `<inserir` | 10 min |
-| 9 | Um integrante envia cada disciplina no Teams até **19/11 23h55** | tabela abaixo | 30 min |
+| 1 | Publicar o repositório no GitHub | Guilherme | ✅ Feito — público |
+| 2 | Salvar o circuito no Wokwi | Fabrini | ✅ Feito |
+| 3 | Azure DevOps: Features, Test Cases e PDF com prints | Fabrini | ✅ Feito |
+| 4 | VM Ubuntu: `00_provisionar_tudo.sh` + `04_teste_falha.sh` | Fabrini | ✅ Feito — 5/5 aprovados |
+| 5 | Incluir o professor como Admin no Azure DevOps | Fabrini | **Pendente — antes de entregar Testing** |
+| 6 | Gravar 6 vídeos e publicar no YouTube (não listado) | João (Linux no PC do Fabrini) | **Pendente** — roteiros em `docs/roteiros/` |
+| 7 | (Recomendado) conversa com um morador real | Equipe | Pendente — `docs/pesquisa_campo.md` |
+| 8 | Colocar os links dos vídeos em `mobile/README.md`, `ml/README.md`, `iot/integrantes.txt` | Guilherme | Pendente (depende do 6) |
+| 9 | Entregar cada disciplina no Teams até **19/11 23h55** | João | Pendente |
 
 ## SOA e Web Services — Implementada · Testada · Evidenciada
 | Requisito | Pts | Arquivo | Status | Evidência / teste |
@@ -25,7 +27,7 @@ Legenda: **Pendente** · **Em desenvolvimento** · **Implementada** · **Testada
 | Swagger | 1,5 | `/swagger`, `backend/docs/openapi.json` | Evidenciada | `evidencias/backend/02_swagger_endpoints.jpg` |
 | Testes | 1,0 | `backend/tests` | Evidenciada | 47/47 — `evidencias/backend/03_dotnet_test_saida.txt` |
 | README com integrantes | — | `backend/README.md` | OK | — |
-**Envio:** link do GitHub. **Pendência:** publicar repositório.
+**Envio:** link do GitHub (já publicado).
 
 ## C# Software Development — Implementada · Testada · Evidenciada
 POO, Web API, EF Core + LINQ, Async/Await, qualidade — mapa em `backend/README.md`. **Envio:** link do GitHub.

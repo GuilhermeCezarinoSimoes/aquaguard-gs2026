@@ -61,7 +61,7 @@ Publique no YouTube (Não listado).
 - **Texto:**
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard – Cybersecurity
-Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+Integrantes: Guilherme Cezarino Simoes (RM 557724), Fabrini Soares (RM 557813) e João Both (RM 558690)
 ZIP: código do módulo (regras PII, Taint Analysis, tradução por IA, dashboard) + evidências da auditoria
 Vídeo do dashboard: https://youtu.be/XXXXXXXX
 Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 (pasta /cybersecurity)

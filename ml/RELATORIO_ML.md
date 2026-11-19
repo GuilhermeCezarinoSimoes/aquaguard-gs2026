@@ -1,7 +1,7 @@
 # Relatório de Machine Learning — AquaGuard
 
 **FIAP · Global Solution 2026.2 · CitizenTech · Engenharia de Software (3º ano)**
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
 **Notebook executado:** [`AquaGuard_ML.ipynb`](AquaGuard_ML.ipynb) (versão HTML: `AquaGuard_ML.html`)
 
 ---

@@ -22,7 +22,7 @@ O mapa completo de "critério → arquivo" está em `backend\README.md`, seção
 ## O que enviar no Teams (copie e cole — já está com o link certo)
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard
-Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+Integrantes: Guilherme Cezarino Simoes (RM 557724), Fabrini Soares (RM 557813) e João Both (RM 558690)
 Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026
 Projeto C# (.NET 8 Web API + EF Core): pasta /backend – instruções em /backend/README.md
 Documentação: Swagger em /swagger · Evidências: /evidencias/backend (47 testes aprovados)

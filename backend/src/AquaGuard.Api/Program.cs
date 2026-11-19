@@ -31,7 +31,7 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1",
         Description = "CitizenTech de prevenção de alagamentos: sensores IoT (ESP32), leituras, " +
                       "alertas por bairro e ocorrências relatadas pelos cidadãos. FIAP Global Solution 2026.2.",
-        Contact = new OpenApiContact { Name = "Guilherme Cezarino Simoes e Fabrini Soares" }
+        Contact = new OpenApiContact { Name = "Guilherme Cezarino Simoes, Fabrini Soares e João Both" }
     });
     var xml = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
     c.IncludeXmlComments(xml);

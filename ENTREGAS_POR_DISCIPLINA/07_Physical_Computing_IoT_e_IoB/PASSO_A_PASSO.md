@@ -71,7 +71,7 @@ Os 3 arquivos estão **nesta pasta**: `sketch.ino`, `diagram.json`, `integrantes
 - **Texto:**
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard – Physical Computing
-Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+Integrantes: Guilherme Cezarino Simoes (RM 557724), Fabrini Soares (RM 557813) e João Both (RM 558690)
 Projeto Wokwi: https://wokwi.com/projects/XXXXXXXX
 Vídeo (4 min): https://youtu.be/XXXXXXXX
 Código e documentação: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 (pasta /iot)

@@ -20,7 +20,7 @@ causa provável e a solução em linguagem simples.
 ## 1. Contexto do trabalho
 - **Faculdade/curso:** FIAP · Engenharia de Software · 3º ano (turma Fev) · **Global Solution 2026.2 — desafio "CitizenTech"**
   (criar tecnologia que resolve um problema real de uma cidade).
-- **Integrantes do grupo:** **Guilherme Cezarino Simoes** e **Fabrini Soares**. (Eu estou ajudando a terminar.)
+- **Integrantes do grupo:** **Guilherme Cezarino Simoes (RM 557724)**, **Fabrini Soares (RM 557813)** e **João Both (RM 558690)**. O **João** é o responsável pelas entregas no Teams e pelos vídeos.
 - **Prazo final:** **quinta-feira, 19/11/2026, às 23h55**, no **Microsoft Teams** — cada matéria tem sua tarefa; **só UMA
   pessoa do grupo envia cada matéria**. 20/11 é feriado.
 - **Projeto:** **AquaGuard** — avisa moradores de São Paulo quando a rua deles vai alagar. Bairro piloto: **Jardim Pantanal**

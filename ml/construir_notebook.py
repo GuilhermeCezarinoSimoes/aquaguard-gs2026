@@ -14,7 +14,7 @@ md("""# AquaGuard · Machine Learning
 ## Vai cair chuva forte amanhã em São Paulo?
 
 **CitizenTech:** AquaGuard — prevenção de alagamentos em bairros vulneráveis de São Paulo (ex.: Jardim Pantanal).
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
 
 ### Pergunta de ML
 > Com as condições meteorológicas observadas **hoje** pela estação oficial do INMET, conseguimos prever se **amanhã** haverá

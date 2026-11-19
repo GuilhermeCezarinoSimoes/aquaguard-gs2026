@@ -153,7 +153,7 @@ Publique no YouTube (Não listado).
 ## O que enviar no Teams
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard – Operating Systems
-Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+Integrantes: Guilherme Cezarino Simoes (RM 557724), Fabrini Soares (RM 557813) e João Both (RM 558690)
 Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026 (pasta /operating-systems: scripts, configurações, README; evidências em /evidencias/operating-systems)
 Vídeo (7 min): https://youtu.be/XXXXXXXX
 ```

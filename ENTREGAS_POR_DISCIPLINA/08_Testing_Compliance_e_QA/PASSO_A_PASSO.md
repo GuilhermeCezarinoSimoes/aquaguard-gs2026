@@ -56,7 +56,7 @@ da Feature correspondente (o campo **Tags** do Test Case diz qual, ex.: `F01`) �
 ### A6. Tirar os prints e montar o PDF
 1. Abra o **Word** (ou Google Docs) e crie um documento com:
    - Título: "Global Solution 2026.2 – AquaGuard – Testing, Compliance & QA"
-   - Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+   - Integrantes: Guilherme Cezarino Simoes (RM 557724), Fabrini Soares (RM 557813) e João Both (RM 558690)
    - **Link do projeto Azure:** copie da barra do navegador (ex.: `https://dev.azure.com/aquaguard-gs/AquaGuard`)
 2. Prints (tecla **Windows + Shift + S** ▸ selecione a área ▸ Ctrl+V no Word):
    - **Boards ▸ Work items**, com filtro de tipo **Feature**: a **lista** das 7 Features.
@@ -94,7 +94,7 @@ Antes: ligue `B_LIGAR_SERVIDOR_API.bat` e `D_LIGAR_APLICATIVO.bat`; tenha o Wokw
 | 2:30–2:55 | `ml\figuras\04_metricas_treino_teste.png` | "Com 14 anos de dados do INMET, avisamos na véspera 7 de cada 10 chuvas fortes. Não é perfeito — por isso o sensor confirma." |
 | 2:55–3:20 | Dashboard de segurança (92 → 18) | "Protegemos a privacidade: o risco ao cidadão caiu de 92 para 18. E o servidor Linux se recupera sozinho. São 89 testes automáticos e 25 casos de teste." |
 | 3:20–3:45 | — | "Para crescer: sensores de baixo custo em cada córrego crítico, em parceria com a Defesa Civil e as associações de bairro." |
-| 3:45–4:00 | — | "AquaGuard: o aviso que chega antes da água. Guilherme Cezarino Simoes e Fabrini Soares." |
+| 3:45–4:00 | — | "AquaGuard: o aviso que chega antes da água. Guilherme Cezarino Simoes, Fabrini Soares e João Both." |
 
 ---
 
@@ -103,7 +103,7 @@ Antes: ligue `B_LIGAR_SERVIDOR_API.bat` e `D_LIGAR_APLICATIVO.bat`; tenha o Wokw
 - **Texto:**
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard – Testing, Compliance & QA
-Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+Integrantes: Guilherme Cezarino Simoes (RM 557724), Fabrini Soares (RM 557813) e João Both (RM 558690)
 Projeto Azure DevOps (professor incluído como Admin): https://dev.azure.com/XXXX/AquaGuard
 PDF com os prints das Features e dos Test Cases em anexo.
 PITCH (4 min): https://youtu.be/XXXXXXXX

@@ -1,6 +1,6 @@
 # AquaGuard · Cybersecurity — Módulo de Privacidade (PII + Taint Analysis + IA)
 
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
 
 O AquaGuard recebe **relatos livres de cidadãos** em situação de enchente. Na pressa, as pessoas escrevem CPF, telefone,
 endereço, condição de saúde ("minha mãe é cadeirante") e até senhas. Esses textos passam por logs, feed público do app,

@@ -1,6 +1,6 @@
 # AquaGuard · Backend C# (.NET 8) — C# Software Development + SOA e Web Services
 
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
 
 API REST que recebe as leituras dos sensores IoT (ESP32), calcula o risco de alagamento, emite alertas por bairro,
 registra relatos dos cidadãos e alimenta o app mobile e o painel web. Backend **compartilhado** pelas disciplinas

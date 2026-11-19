@@ -31,5 +31,6 @@ Thumbs.db
 # Saídas locais da auditoria (as evidências oficiais ficam em evidencias/)
 cybersecurity/saida/
 
-# Pacote para enviar (gerado)
-_ENVIAR_PARA_O_AMIGO/
+# Pacote para enviar ao João (gerado)
+PARA_ENVIAR_AO_JOAO/
+

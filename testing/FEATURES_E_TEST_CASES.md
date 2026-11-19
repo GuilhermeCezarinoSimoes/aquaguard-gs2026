@@ -1,6 +1,6 @@
 # AquaGuard · Testing, Compliance & Quality Assurance
 
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares  
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)  
 **Projeto Azure DevOps:** [https://dev.azure.com/Fabriniaraujo2306/AquaGuard](https://dev.azure.com/Fabriniaraujo2306/AquaGuard)  
 **Totais:** 7 Features · 25 Test Cases (12 positivos, 13 negativos) · caixa-preta
 

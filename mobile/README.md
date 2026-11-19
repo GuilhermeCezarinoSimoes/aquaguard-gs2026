@@ -1,6 +1,6 @@
 # AquaGuard · App Mobile (React Native + TypeScript + Expo Router)
 
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
 
 ## Ficha da CitizenTech
 | | |

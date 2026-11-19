@@ -3,8 +3,9 @@ FIAP - Global Solution 2026.2 - Engenharia de Software - 3o ano
 Physical Computing: IoT & IoB
 
 Integrantes:
-1. Guilherme Cezarino Simoes
-2. Fabrini Soares
+1. Guilherme Cezarino Simoes - RM 557724
+2. Fabrini Soares - RM 557813
+3. João Both - RM 558690
 
 Link do projeto Wokwi: https://wokwi.com/projects/481041117417661441
 Link do video (ate 4 min): <PREENCHER APOS PUBLICAR NO YOUTUBE>

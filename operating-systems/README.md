@@ -1,6 +1,6 @@
 # AquaGuard · Operating Systems — Infraestrutura Linux
 
-**Integrantes:** Guilherme Cezarino Simoes · Fabrini Soares
+**Integrantes:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
 
 Infraestrutura Linux **provisionada automaticamente por Shell Script** para hospedar a aplicação WEB da CitizenTech
 AquaGuard: a **API C# (.NET 8) com painel web e Swagger** (`../backend`), atrás de um proxy **nginx**, com

@@ -1,7 +1,7 @@
 /*
  * AquaGuard — Estação IoT de monitoramento de alagamento (ESP32)
  * FIAP Global Solution 2026.2 · CitizenTech · Physical Computing: IoT & IoB
- * Integrantes: Guilherme Cezarino Simoes · Fabrini Soares
+ * Integrantes: Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
  *
  * O que faz
  *  - HC-SR04 instalado ACIMA do córrego/galeria mede a distância até a superfície da água.

@@ -46,7 +46,7 @@ Entrega: **link do GitHub** + **link do vídeo de até 3 minutos** com o app rod
 ## O que enviar no Teams
 ```
 Global Solution 2026.2 – CitizenTech – AquaGuard
-Integrantes: Guilherme Cezarino Simoes e Fabrini Soares
+Integrantes: Guilherme Cezarino Simoes (RM 557724), Fabrini Soares (RM 557813) e João Both (RM 558690)
 Repositório: https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026  (app na pasta /mobile – README com Ficha, instruções e prints)
 Vídeo (3 min): https://youtu.be/XXXXXXXX
 ```

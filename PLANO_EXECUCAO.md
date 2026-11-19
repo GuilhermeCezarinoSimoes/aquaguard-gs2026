@@ -28,8 +28,9 @@ código foi feito primeiro (pelo agente, em paralelo ao tempo da equipe), e o qu
 | Integrante | Frentes |
 |---|---|
 | Guilherme Cezarino Simoes | GitHub, VM Linux (OS), backend/Swagger no vídeo, Cyber |
-| Fabrini Soares | Wokwi (IoT), Azure DevOps (Testing), app no celular (Mobile), ML |
-| Ambos | Conversa com morador, pitch, revisão final — cada um deve saber explicar o projeto inteiro |
+| Fabrini Soares | Wokwi (IoT), Azure DevOps (Testing), VM Linux testada, app no celular (Mobile), ML |
+| João Both | Gravação e publicação dos vídeos, entregas no Teams (entrou no grupo em 19/11) |
+| Todos | Conversa com morador, pitch, revisão final — cada um deve saber explicar o projeto inteiro |
 
 ## Riscos e mitigação
 | Risco | Mitigação |

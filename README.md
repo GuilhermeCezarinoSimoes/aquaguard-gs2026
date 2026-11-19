@@ -3,8 +3,9 @@
 **FIAP · Global Solution 2026.2 · Desafio CitizenTech · Engenharia de Software — 3º ano**
 
 **Integrantes**
-1. Guilherme Cezarino Simoes
-2. Fabrini Soares
+1. Guilherme Cezarino Simoes - RM 557724
+2. Fabrini Soares - RM 557813
+3. João Both - RM 558690
 
 ---
 

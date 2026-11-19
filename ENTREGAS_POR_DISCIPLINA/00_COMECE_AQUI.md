@@ -4,7 +4,8 @@ Olá! Este guia foi feito para **quem não é da área**. Siga na ordem, sem pul
 Tudo que é programação **já está pronto e testado**. O que falta são tarefas de "clicar, gravar e enviar".
 
 **Prazo final: quinta-feira, 19/11/2026, às 23h55** (no Teams de cada matéria).
-**Integrantes do grupo:** Guilherme Cezarino Simoes · Fabrini Soares
+**Integrantes do grupo:** Guilherme Cezarino Simoes (RM 557724) · Fabrini Soares (RM 557813) · João Both (RM 558690)
+**Quem entrega no Teams e grava os vídeos:** João Both (o vídeo de Linux é gravado no PC do Fabrini, onde está a máquina virtual).
 
 ---
 
