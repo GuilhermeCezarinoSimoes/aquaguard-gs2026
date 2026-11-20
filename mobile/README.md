@@ -58,4 +58,4 @@ Suba antes a API: `cd ../backend && dotnet run --project src/AquaGuard.Api --lau
 > extras; no Android/iOS o app usa **SQLite real**.
 
 ## Vídeo (até 3 min)
-Enviado no Teams da disciplina (YouTube, não listado).
+https://youtu.be/iYA2yNLnnn8

@@ -52,7 +52,7 @@ Cada disciplina tem uma pasta com README próprio. Os vídeos (YouTube, não lis
 |---|---|---|
 | SOA e Web Services | [`backend/`](backend) | [backend/README.md](backend/README.md) — seção "Mapa dos critérios" (SOA) |
 | C# Software Development | [`backend/`](backend) | [backend/README.md](backend/README.md) — seção "Mapa dos critérios" (C#) |
-| Mobile Development & IoT | [`mobile/`](mobile) | [mobile/README.md](mobile/README.md) |
+| Mobile Development & IoT | [`mobile/`](mobile) | [mobile/README.md](mobile/README.md) · [vídeo](https://youtu.be/iYA2yNLnnn8) |
 | IA & Machine Learning | [`ml/`](ml) | [ml/AquaGuard_ML.ipynb](ml/AquaGuard_ML.ipynb) e [ml/RELATORIO_ML.md](ml/RELATORIO_ML.md) |
 | Cybersecurity | [`cybersecurity/`](cybersecurity) | [cybersecurity/README.md](cybersecurity/README.md) |
 | Physical Computing: IoT & IoB | [`iot/`](iot) | [iot/README.md](iot/README.md) · [Wokwi](https://wokwi.com/projects/481041117417661441) |
