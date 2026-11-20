@@ -10,7 +10,7 @@
 | Dependências | [`requirements.txt`](requirements.txt) |
 | Resultados | `resultados_grid_search.csv`, `metricas_treino_teste.csv`, `resumo_modelo.json`, `figuras/` |
 | Modelo treinado | `modelo_chuva_forte.joblib` |
-| Vídeo (até 5 min, YouTube não listado) | Enviado no Teams da disciplina |
+| Vídeo (até 5 min, YouTube não listado) | https://youtu.be/4ZAC9VhrTTc |
 
 ## Como executar
 ```bash
