@@ -71,3 +71,24 @@ curl http://localhost/health ; curl http://localhost/api/painel | jq
   Evidências: `../evidencias/operating-systems/01_relatorio_auditoria_vm.txt` e `02_teste_falha_5_aprovados.log`.
 - 🔧 Correção após o teste real: o `ausearch` do relatório ficava esperando entrada quando executado fora de um terminal
   (o relatório levou 664 s na 1ª execução); agora usa `--input-logs`, entrada vazia e limite de 60 s.
+
+## Vídeo demonstrativo (6:40)
+https://youtu.be/FTKr15VJtFg
+
+## Evidências (capturas da VM real, 19/11/2026)
+Quadros do vídeo de demonstração, gravado na VM `aquaguard-srv01`, e saídas completas em `../evidencias/operating-systems/`.
+
+**Provisionamento automático** — firewall, auditd, validação de DNS/hostname e início da etapa da aplicação
+
+![Provisionamento](../evidencias/operating-systems/03_print_provisionamento_vm.jpg)
+
+**Monitor como serviço systemd**, métricas registradas e teste de falha (API e monitor mortos e reiniciados; alerta de CPU)
+
+![Monitor e teste de falha](../evidencias/operating-systems/04_print_monitor_systemd_e_teste_falha.jpg)
+
+**Aplicação CitizenTech** servida pela VM (painel via nginx)
+
+![Painel](../evidencias/operating-systems/05_print_painel_servido_pela_vm.jpg)
+
+Relatório completo: [`01_relatorio_auditoria_vm.txt`](../evidencias/operating-systems/01_relatorio_auditoria_vm.txt) ·
+teste de falha: [`02_teste_falha_5_aprovados.log`](../evidencias/operating-systems/02_teste_falha_5_aprovados.log)

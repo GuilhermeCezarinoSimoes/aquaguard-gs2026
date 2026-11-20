@@ -120,7 +120,7 @@ Cada disciplina tem uma pasta com README próprio. Os vídeos (YouTube, não lis
 | Monitoramento (CPU/disco/memória) | [`03_monitor.sh`](operating-systems/scripts/03_monitor.sh) |
 | Monitor como serviço tolerante a falhas | [`systemd/aquaguard-monitor.service`](operating-systems/systemd/aquaguard-monitor.service) |
 | Logs de auditoria | [`lib/comum.sh`](operating-systems/scripts/lib/comum.sh) · [`05_relatorio_auditoria.sh`](operating-systems/scripts/05_relatorio_auditoria.sh) |
-| Funcionamento completo e teste de falha | [`00_provisionar_tudo.sh`](operating-systems/scripts/00_provisionar_tudo.sh) · [`04_teste_falha.sh`](operating-systems/scripts/04_teste_falha.sh) · [relatório da VM](evidencias/operating-systems/01_relatorio_auditoria_vm.txt) · [5/5 aprovados](evidencias/operating-systems/02_teste_falha_5_aprovados.log) |
+| Funcionamento completo e teste de falha | [`00_provisionar_tudo.sh`](operating-systems/scripts/00_provisionar_tudo.sh) · [`04_teste_falha.sh`](operating-systems/scripts/04_teste_falha.sh) · [relatório da VM](evidencias/operating-systems/01_relatorio_auditoria_vm.txt) · [5/5 aprovados](evidencias/operating-systems/02_teste_falha_5_aprovados.log) · [prints](evidencias/operating-systems) · [vídeo](https://youtu.be/FTKr15VJtFg) |
 
 ### Testing, Compliance & QA
 | Critério | Onde está |
