@@ -58,4 +58,4 @@ Suba antes a API: `cd ../backend && dotnet run --project src/AquaGuard.Api --lau
 > extras; no Android/iOS o app usa **SQLite real**.
 
 ## Vídeo (até 3 min)
-**Link:** _<inserir link do YouTube>_ · Roteiro: `../docs/roteiros/roteiro_video_mobile.md`
+Enviado no Teams da disciplina (YouTube, não listado).

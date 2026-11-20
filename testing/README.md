@@ -26,4 +26,4 @@ TC01–TC08, TC10, TC14–TC17 e TC19–TC21 também estão cobertos por testes 
    Test Case com os passos. Cole-os no documento de resposta, insira o link do projeto e **exporte em PDF**.
 
 ## Pitch (prêmio Melhor GS)
-O vídeo de até 4 min no YouTube é enviado **nesta disciplina**. Roteiro: `../docs/roteiros/roteiro_pitch.md`.
+O vídeo de até 4 min no YouTube é enviado **nesta disciplina**. Persona usada: `../docs/persona_dona_cida.md`.

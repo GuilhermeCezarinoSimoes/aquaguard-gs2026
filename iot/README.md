@@ -78,6 +78,5 @@ reconexão Wi-Fi automática, contador de falhas de envio sem perder o alerta lo
   48,7 cm de água ≥ 60 % do nível de alerta = Atenção, exatamente como a API calcula).
   Print: `../evidencias/iot/01_wokwi_compilado_executando.jpg`.
 - ✅ Regras de risco idênticas às do backend (cobertas pelos testes `CalculadoraRiscoTests`).
-- ⏳ **Equipe:** entrar na conta Wokwi, recriar o projeto com estes arquivos, **salvar** (gera o link), executar o roteiro de
-  testes acima e gravar o vídeo (`../docs/roteiros/roteiro_video_iot.md`). O projeto de validação não foi salvo porque
-  exige login na conta de vocês.
+- ✅ Projeto salvo no Wokwi: https://wokwi.com/projects/481041117417661441
+  (print: `../evidencias/iot/02_wokwi_projeto_salvo.jpg`).

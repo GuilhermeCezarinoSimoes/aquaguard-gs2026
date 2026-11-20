@@ -14,7 +14,7 @@ para entrega, sem me perguntar nada".
 **O que a IA produziu (revisar e entender antes da entrega):**
 | Parte | Artefatos | Como verificar |
 |---|---|---|
-| Requisitos | `REQUISITOS_GS.md`, `CHECKLIST_ENTREGAS.md`, `PLANO_EXECUCAO.md` | Conferir com o PDF |
+| Requisitos | Levantamento de requisitos, checklist e plano (documentos internos da equipe) | Conferir com o PDF |
 | Backend | `backend/` (camadas, regras de risco, EF Core, migração, Swagger, 47 testes) | `dotnet test` |
 | ML | download INMET, notebook, relatório | Reexecutar o notebook |
 | IoT | `iot/wokwi/*`, simulador de payload | Simular no Wokwi |
@@ -36,7 +36,7 @@ do nível de alerta); fórmula do Indicador de Risco Cidadão.
 **Autor:** Guilherme Cezarino Simoes
 **Resumo:** pedir guias passo a passo para um colaborador leigo terminar a entrega, separados por disciplina, atalhos de
 dois cliques, publicação no GitHub, guia único em HTML e um prompt de passagem de contexto.
-**Resultado:** pasta `ENTREGAS_POR_DISCIPLINA/`, `GUIA_PARA_TERMINAR_O_PROJETO.html`, `PROMPT_PARA_O_CLAUDE.md`; repositório
+**Resultado:** guias internos da equipe por disciplina (fora do repositório); repositório
 publicado; correção de duas falhas nos scripts de Linux encontradas na revisão.
 
 ## Próximos prompts

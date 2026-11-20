@@ -29,7 +29,7 @@ regra combinada) estão em `backend/src/AquaGuard.Domain/Risco/RegrasRisco.cs` e
 | App ⇄ API C# | **Integrado e testado** (relato criado no app gerou ocorrência #3 na API) |
 | Painel web ⇄ API | **Integrado e testado** |
 | ESP32 → API | Firmware pronto para HTTP(S). No Wokwi web, o simulador não alcança `localhost`; requer túnel (ngrok) ou a API na VM com IP público. Integração comprovada com `iot/simulador_payload.py`, que envia **o mesmo JSON** |
-| API na VM Linux | Scripts prontos; execução na VM pendente (máquina de desenvolvimento sem Linux) |
+| API na VM Linux | **Executado em VM real** (Ubuntu Server 24.04, 18/11/2026): provisionamento completo e teste de falha 5/5 aprovados |
 | ML → App | **Demonstração separada**: o notebook gera o modelo (`modelo_chuva_forte.joblib`); servir a previsão no app é o próximo passo |
 | Cyber → API | A auditoria lê os relatos reais da API (`GET /api/ocorrencias`); o app já bloqueia CPF/telefone/e-mail na origem. O pipeline com taint é um protótipo Python que reproduz os destinos dos dados |
 

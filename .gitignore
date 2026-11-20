@@ -35,3 +35,6 @@ cybersecurity/saida/
 PARA_ENVIAR_AO_JOAO/
 
 !evidencias/**/*.log
+
+# Material interno da equipe (guias, roteiros, planejamento) — não vai para o GitHub
+_INTERNO/

@@ -40,5 +40,5 @@ os CPFs/cartões são números de teste públicos, não pertencem a pessoas).
 # na raiz do repositório
 powershell Compress-Archive -Path cybersecurity\aquaguard_sec,cybersecurity\prototipo,cybersecurity\dados,cybersecurity\tests,cybersecurity\README.md,cybersecurity\requirements.txt,evidencias\cybersecurity -DestinationPath entrega_cybersecurity.zip
 ```
-Inclua também o vídeo (roteiro: `../docs/roteiros/roteiro_video_cyber.md`) e o print do dashboard
+Junto com o ZIP vão o vídeo do dashboard e o print
 (`../evidencias/cybersecurity/03_print_dashboard_risco_cidadao.jpg`).

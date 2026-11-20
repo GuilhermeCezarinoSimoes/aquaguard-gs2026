@@ -70,4 +70,3 @@ curl http://localhost/health ; curl http://localhost/api/painel | jq
   Evidências: `../evidencias/operating-systems/01_relatorio_auditoria_vm.txt` e `02_teste_falha_5_aprovados.log`.
 - 🔧 Correção após o teste real: o `ausearch` do relatório ficava esperando entrada quando executado fora de um terminal
   (o relatório levou 664 s na 1ª execução); agora usa `--input-logs`, entrada vazia e limite de 60 s.
-- ⏳ Falta gravar o vídeo (roteiro: `../docs/roteiros/roteiro_video_os.md`).
