@@ -1,5 +1,8 @@
 # AquaGuard · Testing, Compliance & Quality Assurance
 
+
+**Entrega:** projeto no Azure DevOps https://dev.azure.com/Fabriniaraujo2306/AquaGuard · PDF com os prints das Features e Test Cases: [`../evidencias/testing/AquaGuard_Testing_Azure.pdf`](../evidencias/testing/AquaGuard_Testing_Azure.pdf) · Pitch (4 min): https://youtu.be/eOPibyO6slw
+
 Entregável oficial: **Features** (com descrição e critérios de aceite) e **Test Cases** funcionais caixa-preta,
 positivos e negativos (objetivo, preparação, entradas, saídas esperadas e passos), **cadastrados no Azure Boards**,
 com o professor como **Admin** e um **PDF** com o link do projeto + prints de todas as telas. Avaliação: Features 50 % · Test Cases 50 %.

@@ -127,7 +127,8 @@ Cada disciplina tem uma pasta com README próprio. Os vídeos (YouTube, não lis
 |---|---|
 | Features com descrição e critérios de aceite (7) | [`testing/FEATURES_E_TEST_CASES.md`](testing/FEATURES_E_TEST_CASES.md) · [Azure Boards](https://dev.azure.com/Fabriniaraujo2306/AquaGuard) |
 | Test Cases positivos e negativos (25) | mesmo arquivo · CSVs importados no Azure ([features](testing/azure_import_features.csv), [test cases](testing/azure_import_test_cases.csv)) |
-| PDF com prints do Azure e pitch | enviados no Teams da disciplina |
+| PDF com prints do Azure | [`evidencias/testing/AquaGuard_Testing_Azure.pdf`](evidencias/testing/AquaGuard_Testing_Azure.pdf) |
+| Pitch (4 min) | https://youtu.be/eOPibyO6slw |
 
 Arquitetura e integrações: [ARQUITETURA.md](ARQUITETURA.md) · Persona usada no pitch: [docs/persona_dona_cida.md](docs/persona_dona_cida.md) ·
 Uso de IA (exigido pelo edital): [prompts.md](prompts.md)
