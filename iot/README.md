@@ -79,4 +79,5 @@ reconexão Wi-Fi automática, contador de falhas de envio sem perder o alerta lo
   Print: `../evidencias/iot/01_wokwi_compilado_executando.jpg`.
 - ✅ Regras de risco idênticas às do backend (cobertas pelos testes `CalculadoraRiscoTests`).
 - ✅ Projeto salvo no Wokwi: https://wokwi.com/projects/481041117417661441
+- ✅ Vídeo de demonstração: https://youtu.be/l-SpJSgWnFc
   (print: `../evidencias/iot/02_wokwi_projeto_salvo.jpg`).

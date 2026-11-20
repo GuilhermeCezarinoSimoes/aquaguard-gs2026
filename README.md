@@ -55,7 +55,7 @@ Cada disciplina tem uma pasta com README próprio. Os vídeos (YouTube, não lis
 | Mobile Development & IoT | [`mobile/`](mobile) | [mobile/README.md](mobile/README.md) · [vídeo](https://youtu.be/iYA2yNLnnn8) |
 | IA & Machine Learning | [`ml/`](ml) | [ml/AquaGuard_ML.ipynb](ml/AquaGuard_ML.ipynb) e [ml/RELATORIO_ML.md](ml/RELATORIO_ML.md) |
 | Cybersecurity | [`cybersecurity/`](cybersecurity) | [cybersecurity/README.md](cybersecurity/README.md) |
-| Physical Computing: IoT & IoB | [`iot/`](iot) | [iot/README.md](iot/README.md) · [Wokwi](https://wokwi.com/projects/481041117417661441) |
+| Physical Computing: IoT & IoB | [`iot/`](iot) | [iot/README.md](iot/README.md) · [Wokwi](https://wokwi.com/projects/481041117417661441) · [vídeo](https://youtu.be/l-SpJSgWnFc) |
 | Operating Systems | [`operating-systems/`](operating-systems) | [operating-systems/README.md](operating-systems/README.md) |
 | Testing, Compliance & QA | [`testing/`](testing) | [testing/FEATURES_E_TEST_CASES.md](testing/FEATURES_E_TEST_CASES.md) · [Azure DevOps](https://dev.azure.com/Fabriniaraujo2306/AquaGuard) |
 
