@@ -7,6 +7,8 @@
 #   3. Pico de CPU (stress-ng)          → monitor gera ALERTA CPU e depois normaliza
 #   4. Disco cheio (arquivo de teste)   → monitor gera ALERTA DISCO e depois normaliza
 #   5. nginx parado                     → monitor gera ALERTA CRITICO; script restaura
+#   6. Falha controlada num script      → erro registrado no log do script e na auditoria
+#   (Reinicialização da VM: após 'sudo reboot', 'systemctl status aquaguard-api aquaguard-monitor' mostra os dois ativos)
 # Resultado consolidado em /var/log/aquaguard/teste_falha_<data>.log
 # =============================================================================
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -91,12 +93,31 @@ cenario_nginx() {
   esperar 10 api_ok && log OK "nginx restaurado; API acessível pelo proxy"
 }
 
+cenario_script_falha() {  # falha controlada num script: o erro precisa aparecer nos logs e na auditoria
+  local teste="/tmp/aquaguard_falha_controlada.sh"
+  cat > "${teste}" <<FIM
+#!/usr/bin/env bash
+source "${DIR}/lib/comum.sh"
+log INFO "Falha controlada: lendo um arquivo que não existe"
+cat /etc/aquaguard/arquivo_inexistente.conf
+FIM
+  bash "${teste}" >/dev/null 2>&1
+  local codigo=$?
+  if [[ ${codigo} -ne 0 ]] \
+     && tail -n 5 "${AQG_AUDIT_LOG}" | grep -q "script=aquaguard_falha_controlada.sh.*status=falha" \
+     && grep -q "Falha na linha" "${AQG_LOG_DIR}/aquaguard_falha_controlada.log"; then
+    resultado "6-falha controlada em script" 1 "erro (código ${codigo}) registrado em auditoria_execucao.log e aquaguard_falha_controlada.log"
+  else resultado "6-falha controlada em script" 0 "erro não registrado"; fi
+  rm -f "${teste}"
+}
+
 log INFO "Pré-condição: API $(api_ok && echo OK || echo FORA) · monitor $(systemctl is-active aquaguard-monitor)"
 cenario_api_kill
 cenario_monitor_kill
 cenario_cpu
 cenario_disco
 cenario_nginx
+cenario_script_falha
 log INFO "Resumo: ${APROVADOS} aprovados, ${REPROVADOS} reprovados · relatório ${RELATORIO}"
 journalctl -u aquaguard-api -u aquaguard-monitor --since "-10 min" --no-pager | grep -Ei "started|stopped|killed|restart|main process" | tail -20 >> "${RELATORIO}"
 [[ ${REPROVADOS} -eq 0 ]]

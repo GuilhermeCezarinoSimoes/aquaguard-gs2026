@@ -74,7 +74,18 @@ dotnet ef database update -p src/AquaGuard.Infrastructure -s src/AquaGuard.Api
 ```
 Chave dos dispositivos IoT: `AquaGuard__DeviceKey=<segredo>` (variável de ambiente). Vazia = modo demonstração.
 
-## Evidências (`../evidencias/backend/`)
+## Evidências de funcionamento (`../evidencias/backend/`)
+**Painel web consumindo a API após uma leitura crítica do sensor**
+
+![Painel web com alerta crítico](../evidencias/backend/01_painel_web_alerta_critico.jpg)
+
+**Swagger com os endpoints documentados**
+
+![Swagger](../evidencias/backend/02_swagger_endpoints.jpg)
+
+**Testes:** 47 aprovados, 0 falhas ([saída completa](../evidencias/backend/03_dotnet_test_saida.txt)).
+
+Arquivos:
 - `01_painel_web_alerta_critico.jpg` — painel web consumindo a API após leitura crítica
 - `02_swagger_endpoints.jpg` — Swagger UI
 - `03_dotnet_test_saida.txt` + `resultado_testes.trx` — 47 testes aprovados

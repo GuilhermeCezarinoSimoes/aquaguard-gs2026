@@ -31,7 +31,7 @@ AquaGuard: a **API C# (.NET 8) com painel web e Swagger** (`../backend`), atrás
 | `systemd/aquaguard-api.service` | API com `Restart=always`, `ProtectSystem=strict`, `NoNewPrivileges`, `MemoryMax` | Tolerância a falhas da aplicação |
 | `scripts/lib/comum.sh` | Log padronizado (arquivo + journald), **trilha de auditoria** de toda execução (quem, quando, args, resultado, duração), trap de erro | Logs de auditoria e execução — 1 pt |
 | `scripts/05_relatorio_auditoria.sh` | Consolida execuções, alertas, métricas, journal, **auditd**, acessos nginx, firewall | Logs de auditoria |
-| `scripts/04_teste_falha.sh` | 5 cenários: SIGKILL na API, SIGKILL no monitor, pico de CPU, disco cheio, nginx parado — com APROVADO/REPROVADO | Teste de falha |
+| `scripts/04_teste_falha.sh` | 6 cenários: SIGKILL na API, SIGKILL no monitor, pico de CPU, disco cheio, nginx parado e falha controlada num script (erro registrado no log e na auditoria) — com APROVADO/REPROVADO | Teste de falha |
 | `config/aquaguard.env.example` | Todas as variáveis (rede, app, limites) | — |
 
 ## Como executar (VM)
@@ -43,6 +43,7 @@ sudo apt-get update && sudo apt-get install -y git
 git clone https://github.com/GuilhermeCezarinoSimoes/aquaguard-gs2026.git aquaguard && cd aquaguard
 sudo bash operating-systems/scripts/00_provisionar_tudo.sh          # provisiona tudo (≈ 5–8 min)
 sudo bash operating-systems/scripts/04_teste_falha.sh               # testes de falha
+sudo reboot   # depois: systemctl status aquaguard-api aquaguard-monitor (ambos 'enabled' e 'active' após o boot)
 sudo bash operating-systems/scripts/05_relatorio_auditoria.sh       # relatório consolidado
 ```
 Para IP estático/DNS próprios: edite `/etc/aquaguard/aquaguard.env` (`AQG_IP_ESTATICO=192.168.56.10/24`, `AQG_GATEWAY=...`)
